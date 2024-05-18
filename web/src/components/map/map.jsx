@@ -13,7 +13,7 @@ function Map() {
 
     const googleMap = new window.google.maps.Map(mapRef.current, {
       center: { lat: user.location?.coordinates[0], lng: user.location?.coordinates[1] },
-      zoom: 15
+      zoom: 13
 
     })
     new window.google.maps.Marker({
@@ -23,7 +23,7 @@ function Map() {
     })
     const request = {
       location : {lat: user.location?.coordinates[0], lng: user.location.coordinates[1]},
-      radius: "2000",
+      radius: "3000",
       type: ["movie_theater"]
     };
     const service = new google.maps.places.PlacesService(googleMap);

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import("./home.css")
 import backgroundHome from "../../assets/images/image.jpg"
 import AutoPlay from "../../components/auto-play/auto-play";
+import AskList from "../../components/ask-list/ask-list";
 
 
 
@@ -33,7 +34,7 @@ function Home() {
           
           <div className="mb-3">
             <Link to="/main">
-              <button className="btn btn-danger btn-custom">Explorar</button>
+              <button className="btn btn-danger btn-custom">Get started </button>
             </Link>
           </div>
         </div>
@@ -45,12 +46,12 @@ function Home() {
            <AutoPlay className="align-item-center"/>
           
         </div>
+        <div className="background-slider p-5 container d-flex align-item-center">
+         
+           <AskList className="align-item-center"/>
+          
         </div>
-
-        
-
-
-
+        </div>
       </section>
     </PageLayout>
 
