@@ -20,8 +20,8 @@ function MainPage() {
             <MoviesList carouselType={"carousel-main-section"} />
         
             <FormFilter handleGenreChange={handleGenreChange} />
-            <div  ><MoviesSection title= {`Genres selected`} selectedGenre={selectedGenre} /></div>
-            <div><MoviesSection  title= {"for you"} selectedGenre={user?.genre}/></div>
+            <div  ><MoviesSection title= {`Genres selected`} selectedGenre={selectedGenre} /></div> 
+            <div><MoviesSection  title= {"for you"} selectedGenre={user?.genre}/></div> 
         </PageLayout>
     );
 }

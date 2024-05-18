@@ -20,16 +20,12 @@ function MoviesList({ title, genre, filter, handlePlayVideo, carouselType }) {
                 const query = {};
                 if (filter) {
                     query.genres = filter;
-                } else if (genre) {
-                    query.genres = genre;
-                } else {
-                    query.genres = user?.genre;
-                }
+                } 
                 
-                setSearchedGenre(query.genres || "")
+                //setSearchedGenre(query.genres || "")
                 const { data: movies } = await getMovies(query)
                 setMovies(movies)
-             //  await getUserProfile(user)
+                await getUserProfile(user)
 
             }
 
@@ -38,7 +34,7 @@ function MoviesList({ title, genre, filter, handlePlayVideo, carouselType }) {
             }
         }
         fetchMovies();
-    }, [genre, filter, user])
+    }, [genre, filter])
 
   
    
@@ -64,7 +60,7 @@ function MoviesList({ title, genre, filter, handlePlayVideo, carouselType }) {
     
     
     else {
-        return null; // O un fallback adecuado si carouselType no coincide con ninguno de los casos
+        return null; 
     }
         
 
