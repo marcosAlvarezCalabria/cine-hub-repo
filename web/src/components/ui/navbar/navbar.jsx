@@ -6,13 +6,13 @@ import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import UserAvatar from "../user-avatar/user-avatar";
-import ShowModalMapContext from "../../../contexts/showModalMap.context";
+import MovieCreationIcon from '@mui/icons-material/MovieCreation';
 
 
 function Navbar() {
   const { user, doLogout } = useContext(AuthContext);
   const [ navbarColor, setNavbarColor] = useState();
-  const { toggleModal} = useContext(ShowModalMapContext)
+ 
  
 
 
@@ -46,20 +46,20 @@ function Navbar() {
         <NavLink to="/" className="navbar-brand"><img src={logo} alt="" /></NavLink>
         <NavLink className={"text-decoration-none"}  to="/profile">{user ? <UserAvatar user={user}/>: "" }</NavLink>
         <div className="buttons row">
-          <div className="col-4"></div>
-          <div className="col-4">
+          
+         
         
             
-            {user ? (
-              <>
-              <button className=" btn btn-danger" onClick={doLogout}>Logout</button>
-              <button className="btn btn-primary" onClick={toggleModal}></button>
-              </>
+          {user ? (
+              <div className="d-flex row-columns ">
+              <button className="col-md-12 btn btn-danger " onClick={doLogout}>Logout</button>
+              
+              </div>
               
             ) : (
               <a href="/login" className="btn btn-danger btn-block">Login</a>
             )}
-          </div>
+        
           <div className="col-4"></div>
         </div>
       </div>

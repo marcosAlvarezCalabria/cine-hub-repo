@@ -95,7 +95,13 @@ function Profile() {
                 </div>
 
             </div>
-            <Map/>
+            <div className="d-flex align-items-center justify-content-center p-5">
+                
+            <div className="favorites-movies col-md-10 p-5 container-profile">
+            <h2 className="text-cinemas">Cinemas near you :</h2>
+                <Map/>
+            </div>
+            </div>
             
         </PageLayout>
     );

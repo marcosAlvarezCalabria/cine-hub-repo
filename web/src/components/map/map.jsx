@@ -45,7 +45,7 @@ function Map() {
   }, [user])
 
   return (
-    <div ref={mapRef} style={{ width: "80%", height: "400px" }}></div>
+    <div ref={mapRef} style={{ width: "100%", height: "400px" }}></div>
   )
 
 }

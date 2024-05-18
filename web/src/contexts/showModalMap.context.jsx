@@ -5,8 +5,6 @@ const ShowModalMapContext= createContext();
 export function ShowModalMapContextProvider({ children }) {
     const [showModal, setShowModal] = useState(false);
 
-
-
      function toggleModal(){
         setShowModal (!showModal)
     };
