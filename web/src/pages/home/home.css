@@ -1,0 +1,22 @@
+
+.btn-custom {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+    padding: 1rem 2rem; /* Ajusta el padding según sea necesario */
+  }
+ 
+.separation-line{
+    width: 100%;
+    height: 5px;
+    background-color: rgb(113, 111, 111);
+}
+.big-text{
+  color: rgb(255, 253, 253);
+  font-size: 3rem;
+}
+
+.background-slider{
+  border-radius: 10px;
+}
+.text-section-2{
+color: white;
+}

@@ -1,0 +1,34 @@
+
+/*
+.page-layout__register::before {
+    background-image: url(../../../assets/images/background-register1.jpg);
+    content: '';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.page-layout__home::before {
+    background-image: url(../../../assets/images/background-home3.jpg);
+    content: '';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+*/
+

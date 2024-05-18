@@ -1,0 +1,75 @@
+.movie_card{
+    padding: 0 !important;
+    background-color: #282525;
+}
+
+.movie_card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 10rem;
+}
+
+.movie_info{
+    color: #fffafa;
+    font-size: 20px;
+}
+
+.card-title{
+    width: 100%;
+    height: 4rem;
+    color: white;
+   
+}
+
+.play_button{
+    background-color: #ff3d49;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 5px;
+    bottom: 131px;
+    font-size: 20px;
+    padding-left: 14px;
+    padding-top: 10px;
+    color: #000000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.play_button:hover{
+    transform: scale(1.2);
+}
+
+.credits{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #8e24aa;
+    font-size: 18px;
+}
+
+.credits .card-body{
+    padding: 0;
+}
+
+.fa-heart{
+    color: red;
+    position: absolute;
+
+}
+.image-container {
+    position: relative;
+  }
+  
+  .favorite-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .favorite-icon:hover {
+    transform: scale(1.2);
+  }
+  

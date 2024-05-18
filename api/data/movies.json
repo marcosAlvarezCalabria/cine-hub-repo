@@ -1,0 +1,75 @@
+[
+  
+  {
+    "id":726871,
+    "title": "Dune",
+    "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+    "releaseDate": "2021-09-15",
+    "popularity": 550.936,
+    "voteAverage": 7.779,
+    "voteCount": 11608,
+    "genreIds": [878, 12],
+    "posterURL":  "https://art-gallery-emea.api.hbo.com/images/GYUjdLgBiJp5otAEAAAAJ/tile?v=a48240ede85610e40f64dfbe77b5c37e&size=1440x810&compression=low&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:hbo:territory:argentina&language=es-es",
+    "backdropURL":"https://image.tmdb.org/t/p/original/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+  },
+  {
+    "id":878,
+    "title": "A Clockwork Orange",
+    "overview": "In a near-future Britain, young Alexander DeLarge and his pals get their kicks beating and raping anyone they please. When not destroying the lives of others, Alex swoons to the music of Beethoven. The state, eager to crack down on juvenile crime, gives an incarcerated Alex the option to undergo an invasive procedure that'll rob him of all personal agency. In a time when conscience is a commodity, can Alex change his tune?",
+    "releaseDate": "1971-12-19",
+    "popularity": 58.401,
+    "voteAverage": 8.206,
+    "voteCount": 12467,
+    "genreIds": [878, 80],
+    "posterURL": "https://art-gallery-emea.api.hbo.com/images/GYDbZxAw93SuQKAEAAAAD/tile?v=0032e9ff17d081dd894609ddd0c88193&size=1440x810&compression=low&protection=false&language=es-es",
+    "backdropURL": "https://image.tmdb.org/t/p/original/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg"
+  },
+  {
+    "id": 10749,
+    "title": "The Great Gatsby",
+    "overview": "An adaptation of F. Scott Fitzgerald's Long Island-set novel, where Midwesterner Nick Carraway is lured into the lavish world of his neighbor, Jay Gatsby. Soon enough, however, Carraway will see through the cracks of Gatsby's nouveau riche existence, where obsession, madness, and tragedy await.",
+    "releaseDate": "2013-05-09",
+    "popularity": 49.774,
+    "voteAverage": 7.37,
+    "voteCount": 11909,
+    "genreIds": [18, 10749],
+    "posterURL":"https://art-gallery-emea.api.hbo.com/images/GYLE5fgQVVcPCOAEAAAAF/tile?v=4a78c445eb869d475e7bbdf49b0f2bde&size=1440x810&compression=low&protection=false&language=es-es",
+    "backdropURL": "https://image.tmdb.org/t/p/original/tb440cwQMRoVHnhYJlzlxfv1ikm.jpg"
+  },
+  {
+    "id": 137113,
+    "title": "Edge of Tomorrow",
+    "overview": "Major Bill Cage is an officer who has never seen a day of combat when he is unceremoniously demoted and dropped into combat. Cage is killed within minutes, managing to take an alpha alien down with him. He awakens back at the beginning of the same day and is forced to fight and die again... and again - as physical contact with the alien has thrown him into a time loop.",
+    "releaseDate": "2014-05-27",
+    "popularity": 55.785,
+    "voteAverage": 7.617,
+    "voteCount": 13386,
+    "genreIds": [28, 878],
+    "posterURL": "https://art-gallery-emea.api.hbo.com/images/GYKa1nQNJaLHDwwEAAACY/tile?v=53b58b342deaed2ffe7b1400f00bf968&size=1440x810&compression=low&protection=false&language=es-es",
+    "backdropURL": "https://image.tmdb.org/t/p/original/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg"
+  },
+  {
+    "id": 673,
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "overview": "Year three at Hogwarts means new fun and challenges as Harry learns the delicate art of approaching a Hippogriff, transforming shape-shifting Boggarts into hilarity and even turning back time. But the term also brings danger: soul-sucking Dementors hover over the school, an ally of the accursed He-Who-Cannot-Be-Named lurks within the castle walls, and fearsome wizard Sirius Black escapes Azkaban. And Harry will confront them all.",
+    "releaseDate": "2004-05-31",
+    "popularity": 135.854,
+    "voteAverage": 8.017,
+    "voteCount": 20896,
+    "genreIds": [12, 14],
+    "posterURL":"https://art-gallery-emea.api.hbo.com/images/GXssObwqZrVVGwwEAAABI/tile?v=c6607201fce0123d23197c10fbd14595&size=1440x810&compression=low&protection=false&language=es-es",
+    "backdropURL": "https://image.tmdb.org/t/p/original/obKmfNexgL4ZP5cAmzdL4KbHHYX.jpg"
+  },
+  {
+    "id": 62,
+    "title": "2001: A Space Odyssey",
+    "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+    "releaseDate": "1968-04-02",
+    "popularity": 403.525,
+    "voteAverage": 8.078,
+    "voteCount": 11088,
+    "genreIds": [878, 9648, 12],
+    "posterURL":"https://art-gallery-emea.api.hbo.com/images/GXjS6HAogSI-njwEAAASb/tile?v=b18326a5aa87c68353293552da0a6151&size=1440x810&compression=low&protection=false&language=es-es",
+    "backdropURL": "https://image.tmdb.org/t/p/original/w5IDXtifKntw0ajv2co7jFlTQDM.jpg"
+  }
+]

@@ -1,0 +1,19 @@
+
+.div-body{
+    background-color: rgb(255, 255, 255);
+}
+.div-genres{
+    color: rgb(104, 99, 99);
+}
+.card-movie-detail{
+
+    
+    
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button-trailer{
+    min-width: 50px;
+}

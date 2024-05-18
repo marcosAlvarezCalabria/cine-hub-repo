@@ -1,0 +1,33 @@
+.slider-container {
+    padding:0; /* Elimina el relleno */
+    color: rgb(21, 20, 20);
+    min-height: auto;
+  
+}
+
+.slick-list {
+    padding: 0; /* Elimina el relleno */
+    margin: 0; /* Elimina los márgenes */
+}
+
+.slick-slide img {
+    width: 100%;
+    display: block; /* Asegura que las imágenes ocupen todo el ancho */
+}
+
+.slick-prev, .slick-next {
+    z-index: 1; /* Asegura que los botones estén encima de las imágenes */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+img{
+    max-height: 600px;
+}
