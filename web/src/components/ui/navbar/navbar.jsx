@@ -6,11 +6,13 @@ import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import UserAvatar from "../user-avatar/user-avatar";
+import ShowModalMapContext from "../../../contexts/showModalMap.context";
 
 
 function Navbar() {
   const { user, doLogout } = useContext(AuthContext);
   const [ navbarColor, setNavbarColor] = useState();
+  const { toggleModal} = useContext(ShowModalMapContext)
  
 
 
@@ -49,7 +51,11 @@ function Navbar() {
         
             
             {user ? (
+              <>
               <button className=" btn btn-danger" onClick={doLogout}>Logout</button>
+              <button className="btn btn-primary" onClick={toggleModal}></button>
+              </>
+              
             ) : (
               <a href="/login" className="btn btn-danger btn-block">Login</a>
             )}

@@ -1,12 +1,14 @@
 
-import { useState,useEffect } from "react";
+import { useState,useEffect, useContext } from "react";
 import "./page-layout.css"
+import ShowModalMapContext from "../../../contexts/showModalMap.context";
 
 
 
 function PageLayout({ children, background , className}) {
-const [ isBackground, setIsBackground ] = useState("false")
-
+const [ isBackground, setIsBackground ] = useState("false") ;
+const { showModal} = useContext(ShowModalMapContext);
+console.log(showModal)
 useEffect (() => {
   if(background){
     setIsBackground(true)

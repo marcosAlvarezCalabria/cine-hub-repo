@@ -8,13 +8,17 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './index.css';
+import { ShowModalMapContextProvider } from './contexts/showModalMap.context.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContextProvider>
-         <App />
+        <ShowModalMapContextProvider>
+          <App />
+        </ShowModalMapContextProvider>
+         
       </AuthContextProvider>
        
      

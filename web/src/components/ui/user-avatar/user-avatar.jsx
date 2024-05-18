@@ -1,5 +1,5 @@
 import {Avatar, Stack} from '@mui/material';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import AuthContext from '../../../contexts/auth.context';
 
 function UserAvatar({ width, height, fontSize, }){
