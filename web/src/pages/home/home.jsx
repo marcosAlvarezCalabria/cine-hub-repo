@@ -1,9 +1,9 @@
 import PageLayout from "../../components/layouts/page-layout/page-layout";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import("./home.css")
 import backgroundHome from "../../assets/images/image.jpg"
 import AutoPlay from "../../components/auto-play/auto-play";
-import AutoCompleteInput from "../../components/autoComplete-input/autoComplete-input";
+
 
 
 
@@ -11,7 +11,15 @@ import AutoCompleteInput from "../../components/autoComplete-input/autoComplete-
 
 
 function Home() {
- 
+
+//   const navigate = useNavigate()
+// const  handlePlaceChanged = ( { lat, lng, address }) => {
+//   navigate ({
+//     pathname: `/maps`,
+//     search: `?lat=${lat}&lng=${lng}&address=${address}`
+//   })
+//  }
+
   return (
 
     <PageLayout background={backgroundHome}>
@@ -21,7 +29,8 @@ function Home() {
           <div className="row justify-content-center">
             <h1 className="big-text col-sm-12 col-md-6">Welcome to CineHub, where every movie tells a story and every story ignites imagination.</h1>
           </div>
-          <AutoCompleteInput/>
+          {/* <AutoCompleteInput onPlaceChange={handlePlaceChanged}/> */}
+          
           <div className="mb-3">
             <Link to="/main">
               <button className="btn btn-danger btn-custom">Explorar</button>

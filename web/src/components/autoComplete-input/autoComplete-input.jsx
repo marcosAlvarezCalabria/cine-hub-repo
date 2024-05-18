@@ -2,17 +2,24 @@ import { useEffect, useRef } from "react";
 
 const autoCompleteOptions = {
   componentRestrictions: { country: "ie" },
-  types: ["movie_theater"],
+  types: ["address"],
 };
 
-function AutoCompleteInput({ className }) {
+function AutoCompleteInput({ className, onPlaceChange }) {
   const autoCompleteInputRef = useRef();
 
   useEffect(() => {
-    const autocomplete = new window.google.maps.places.Autocomplete(
-      autoCompleteInputRef.current,
-      autoCompleteOptions
-    );
+    const autocomplete = new window.google.maps.places.Autocomplete(autoCompleteInputRef.current,autoCompleteOptions);
+    window.google.maps.event.addListener(autocomplete, "place_changed", ()=>{
+      const place = autocomplete.getPlace()
+     if (place && place.geometry?.location) {
+      const location  = {lat: place.geometry.location.lat(), lng: place.geometry.location.lng(), address: place.formatted_address}
+      onPlaceChange(location)
+     }
+    })
+    return() => {
+      window.google.maps.event.clearListeners(autocomplete, "place_changed")
+    }
   }, []);
 
   return (
@@ -30,7 +37,8 @@ function AutoCompleteInput({ className }) {
 }
 
 AutoCompleteInput.defaultProps = {
-  className: ""
+  className: "",
+  onPlaceChange: (location) => console.info(location)
 };
 
 export default AutoCompleteInput;

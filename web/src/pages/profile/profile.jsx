@@ -9,6 +9,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import "./profile.css";
 import MovieItem from "../../components/movies/movie-item/movie-item";
 import CardMovieFavorite from "../../components/card-movie-favorites/card-movie-favorite";
+import Map from "../../components/map/map";
 
 function Profile() {
     const { id } = useParams();
@@ -94,7 +95,7 @@ function Profile() {
                 </div>
 
             </div>
-            
+            <Map/>
             
         </PageLayout>
     );

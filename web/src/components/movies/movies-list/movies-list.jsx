@@ -22,7 +22,7 @@ function MoviesList({ title, genre, filter, handlePlayVideo, carouselType }) {
                     query.genres = filter;
                 } 
                 
-                //setSearchedGenre(query.genres || "")
+                setSearchedGenre(query.genres || "")
                 const { data: movies } = await getMovies(query)
                 setMovies(movies)
                 await getUserProfile(user)
