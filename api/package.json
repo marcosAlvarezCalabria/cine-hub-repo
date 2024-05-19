@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "stars": "node app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js",
     "seeds": "node bin/seeds.js"
-  },
+  }, 
+
   "author": "",
   "license": "ISC",
   "devDependencies": {
