@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import genreData from "../../../../data/genre.data.json"
+import genreData from "../../../data/genre.data.json"
 import ButtonsCarousel from '../buttons-carousel/buttons-carousel';
 
 function FormFilter({ handleGenreChange }) {

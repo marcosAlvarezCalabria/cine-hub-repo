@@ -14,19 +14,12 @@ app.use(express.json());
 app.use(cors);
 
 //Routes
-const router = require ("./configs/routes.config");
-app.use("/api/v1", router)
 
-//Error handlers 
+app.use("/api/v1", require ("./configs/routes.config"));
 
-app.use ((req, res, next) => {
-    res.status(404).json({ message:"Route not found" });
-});
-app.use((err, req, res, next) => {
-    console.error(err)
+app.use("/", require("./web"));
 
-    res.status(500).json({message : "Internal server error"})
-})
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.info(`Application running in port ${port}`))
 

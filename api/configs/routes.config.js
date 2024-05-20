@@ -25,7 +25,16 @@ router.delete("/movie/:id/comments", comments.delete)
 
 router.patch("/user/favorites/:id/remove",authMiddleware.checkAuth, user.removeFavorites)
 
+//*******error handlers************* */
 
+router.use ((req, res, next) => {
+    res.status(404).json({ message:"Route not found" });
+});
+router.use((err, req, res, next) => {
+    console.error(err)
+
+    res.status(500).json({message : "Internal server error"})
+})
 
 
 

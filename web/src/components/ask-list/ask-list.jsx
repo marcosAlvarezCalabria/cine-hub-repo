@@ -1,4 +1,4 @@
-import { faqs } from "../../../../data/faq.data.json";
+import { faqs } from "../../../data/faq.data.json";
 import AskListItem from "./ask-list-item";
 
 function AskList() {
