@@ -16,6 +16,7 @@ function MainPage() {
 
     return (
         <PageLayout className= "">
+            <div className="stuffed">-</div>
 
             <MoviesList carouselType={"carousel-main-section"} />
         

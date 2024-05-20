@@ -1,33 +1,46 @@
-.slider-container {
-    padding:0; /* Elimina el relleno */
-    color: rgb(21, 20, 20);
-    min-height: auto;
-  
+.carrousel-main {
+    height: 100%; /* Asegura que el contenedor del carrusel ocupe todo el espacio disponible */
 }
 
-.slick-list {
-    padding: 0; /* Elimina el relleno */
-    margin: 0; /* Elimina los márgenes */
+.movie-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    padding: 10px; /* Ajusta el relleno para mejorar la apariencia en pantallas pequeñas */
 }
 
-.slick-slide img {
-    width: 100%;
-    display: block; /* Asegura que las imágenes ocupen todo el ancho */
+.movie-title {
+    font-size: 2rem; /* Tamaño de fuente por defecto */
 }
 
-.slick-prev, .slick-next {
-    z-index: 1; /* Asegura que los botones estén encima de las imágenes */
-    top: 50%;
-    transform: translateY(-50%);
+.movie-overview {
+    font-size: 1rem; /* Tamaño de fuente por defecto */
 }
 
-.slick-prev {
-    left: 10px;
+.movie-icon-btn {
+    padding: 0.5rem; /* Ajuste de relleno para el botón del icono */
 }
 
-.slick-next {
-    right: 10px;
+.movie-icon {
+    font-size: 2rem; /* Tamaño del icono por defecto */
 }
-img{
-    max-height: 600px;
+
+@media (max-width: 768px) {
+    .movie-title {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .movie-icon {
+        font-size: 1.5rem; /* Tamaño del icono más pequeño en pantallas pequeñas */
+    }
+
+    .movie-content {
+        padding: 20px; /* Ajusta el relleno para mejorar la apariencia en pantallas pequeñas */
+    }
+
+    .movie-overview {
+        display: none; /* Oculta la descripción en pantallas pequeñas */
+    }
+
 }

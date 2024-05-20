@@ -17,29 +17,26 @@ function CarouselMainSection({ movies }) {
 
     return (
         <div className="container-fluid slider-container">
-            <Slider {...settings}>
-                {movies.map((movie) => (
-                    <div key={movie.id} className="carrousel-main position-relative">
-                        <div className="position-absolute start-0 w-100 h-100 bg-dark opacity-50"></div>
-                        <img src={movie.posterURL} className="img-fluid" alt={movie.title} />
-                        <div className="position-absolute bottom-0 p-5 start-0   row-columns p-3 text-light">
-                            <div className="d-flex ">
-                           
-                            <h1 className="col-md-4 ">{movie.title}</h1>
-                            <NavLink to={`/movies/${movie?.id}`}>
-                           <button className="btn btn-dark rounded-circle"><AddIcon fontSize="large" /></button>
+        <Slider {...settings}>
+            {movies.map((movie) => (
+                <div key={movie.id} className="carrousel-main position-relative">
+                    <div className="position-absolute start-0 w-100 h-100 bg-dark opacity-50"></div>
+                    <img src={movie.posterURL} className="img-fluid" alt={movie.title} />
+                    <div className="position-absolute bottom-0 p-3 p-md-5 start-0 text-light movie-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h1 className="movie-title mb-0 mt-5 me-2">{movie.title}</h1>
+                            <NavLink to={`/movies/${movie.id}`}>
+                                <button className="btn btn-dark rounded-circle movie-icon-btn mt-5">
+                                    <AddIcon className="movie-icon" />
+                                </button>
                             </NavLink>
-
-                            </div>
-                             
-                            <p className="col-6">{movie.overview}</p>
-                           
-
                         </div>
+                        <p className="movie-overview d-none d-md-block">{movie.overview}</p>
                     </div>
-                ))}
-            </Slider>
-        </div>
+                </div>
+            ))}
+        </Slider>
+    </div>
     );
 }
 

@@ -28,7 +28,7 @@
     height: 40px;
     border-radius: 50%;
     right: 5px;
-    bottom: 131px;
+    bottom: 150px;
     font-size: 20px;
     padding-left: 14px;
     padding-top: 10px;
@@ -73,3 +73,14 @@
     transform: scale(1.2);
   }
   
+
+  
+  @media (max-width: 768px) {
+    .play_button {
+      font-size: 0.9rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+      width: 25px;
+      height: 25px;
+      padding-left: 7px;
+      padding-top: 6px;
+    }
+  }

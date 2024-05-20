@@ -64,3 +64,22 @@ h5{
     color: rgb(255, 255, 255);
 }
 
+.container-profile .name {
+    font-size: 2em;
+}
+
+@media (max-width: 768px) {
+    .container-profile .name {
+        font-size: 1.5em;
+    }
+}
+
+.container-profile .birthDate h5, .container-profile .email h5 {
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .container-profile .birthDate h5, .container-profile .email h5 {
+        font-size: 1em;
+    }
+}
