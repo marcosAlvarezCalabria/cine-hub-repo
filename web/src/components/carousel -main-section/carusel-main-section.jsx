@@ -23,20 +23,25 @@ function CarouselMainSection({ movies }) {
                     <div className="position-absolute start-0 w-100 h-100 bg-dark opacity-50"></div>
                     <img src={movie.posterURL} className="img-fluid" alt={movie.title} />
                     <div className="position-absolute bottom-0 p-3 p-md-5 start-0 text-light movie-content">
-                        <div className="d-flex justify-content-between align-items-center">
-                            <h1 className="movie-title mb-0 mt-5 me-2">{movie.title}</h1>
-                            <NavLink to={`/movies/${movie.id}`}>
-                                <button className="btn btn-dark rounded-circle movie-icon-btn mt-5">
-                                    <AddIcon className="movie-icon" />
-                                </button>
-                            </NavLink>
+                        <div className="row">
+                            <div className="col-12 col-md-8 col-lg-6">
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <h1 className="movie-title mb-0 mt-5 me-2">{movie.title}</h1>
+                                    <NavLink to={`/movies/${movie.id}`}>
+                                        <button className="btn btn-dark rounded-circle movie-icon-btn mt-5">
+                                            <AddIcon className="movie-icon" />
+                                        </button>
+                                    </NavLink>
+                                </div>
+                                <p className="movie-overview d-none d-md-block">{movie.overview}</p>
+                            </div>
                         </div>
-                        <p className="movie-overview d-none d-md-block">{movie.overview}</p>
                     </div>
                 </div>
             ))}
         </Slider>
     </div>
+    
     );
 }
 
