@@ -14,11 +14,11 @@ function CarouselMainSection({ movies }) {
         slidesToScroll: 1,
         arrows: true
     };
-
+    const limitedMovies = movies.slice(0, 5);
     return (
         <div className="container-fluid slider-container">
         <Slider {...settings}>
-            {movies.map((movie) => (
+            {limitedMovies.map((movie) => (
                 <div key={movie.id} className="carrousel-main position-relative">
                     <div className="position-absolute start-0 w-100 h-100 bg-dark opacity-50"></div>
                     <img src={movie.posterURL} className="img-fluid" alt={movie.title} />

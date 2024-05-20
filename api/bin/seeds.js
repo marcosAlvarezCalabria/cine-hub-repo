@@ -11,7 +11,7 @@ mongoose.connection.once("open", () => {
     console.log(`Successfully connected to the data base ${mongoose.connection.db.database}`)
     mongoose.connection.dropCollection("movies")
         .then( () => {
-            console.info("Dropped restaurants collection ");
+            console.info("Dropped movies  collection ");
         
             moviesData.forEach(m => {
                 m.genres = m.genreIds.map(g => genres[g.toString()])

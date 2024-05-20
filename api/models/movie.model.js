@@ -38,6 +38,9 @@ const MovieSchema = new mongoose.Schema({
     backdropURL: {
         type: String,
         required: true
+    },
+    trailerId:{
+        type:String
     }
 },
     {

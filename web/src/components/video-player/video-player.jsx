@@ -5,7 +5,7 @@ function VideoPlayer({url, width, height}){
     return(
         
             
-  <ReactPlayer className="col-md-10 " url="www.youtube.com/watch?v=TYljxL4WeRo" width={width} height={height}/>
+  <ReactPlayer className="col-md-10 " url="www.youtube.com/watch?v=XdKzUbAiswE" width={width} height={height}/>
     )
 }
 

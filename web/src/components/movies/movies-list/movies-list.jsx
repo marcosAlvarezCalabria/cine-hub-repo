@@ -43,7 +43,7 @@ function MoviesList({ title, genre, filter, handlePlayVideo, carouselType }) {
     if (carouselType === "CenterModeCarousel") {
         return (
             
-                <CenterModeCarousel title={title} selectedGenre={filter}  handlePlayVideo={handlePlayVideo} movies={movies} />
+                <CenterModeCarousel title={title} selectedGenre={filter} handlePlayVideo={handlePlayVideo} movies={movies} />
             
         );
     } else if (carouselType === "CarouselPauseOnHover") {
