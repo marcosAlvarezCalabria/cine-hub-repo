@@ -9,7 +9,7 @@ primary_region = 'cdg'
 [build]
 [build.args]
 VITE_API_BASE_URL = "https://cine-hub.fly.dev/api/v1"
-VITE_GOOGLE_API_KEY = ""
+VITE_GOOGLE_API_KEY = "AIzaSyDGlndmKw6X3v4pG8FWrH_EaLdtniLvdxg"
 [env]
 CORS_ORIGIN = "https://cine-hub.fly.dev"
 

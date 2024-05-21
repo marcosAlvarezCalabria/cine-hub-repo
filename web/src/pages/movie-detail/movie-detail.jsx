@@ -47,7 +47,7 @@ function MovieDetail() {
             <h2>Movie Details</h2>
             <CardMovieDetail handlePlayVideo={handleOpen} handleComments={handleComments} movie={movie} error={error} />
             {!showForm && <CommentsForm handleComments={handleComments} movie={movie} />}
-             <BasicModal open={open} handleClose={handleClose}/> 
+             <BasicModal open={open} whatToShow={movie?.trailerId}  handleClose={handleClose}/> 
         </div>
     );
 }

@@ -1,7 +1,8 @@
-import * as React from 'react';
+
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal';
 import VideoPlayer from '../video-player/video-player';
+
 
 const style = {
   position: 'absolute',
@@ -16,7 +17,9 @@ const style = {
   p: 0,
 };
 
-export default function BasicModal({open ,handleOpen, handleClose}) {
+export default function BasicModal({open ,handleOpen, whatToShow, handleClose}) {
+  console.log(whatToShow)
+  
  
   return (
     <div>
@@ -28,7 +31,7 @@ export default function BasicModal({open ,handleOpen, handleClose}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-         <VideoPlayer width = "100%" height="500px"/>
+         <VideoPlayer trailerId={whatToShow} width = "100%" height="500px"/>
         </Box>
       </Modal>
     </div>

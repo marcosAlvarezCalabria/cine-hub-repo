@@ -7,7 +7,7 @@ import MovieItem from "../../movies/movie-item/movie-item";
 
 
 
-function CenterModeCarousel({title,selectedGenre, movies,handlePlayVideo }) {
+function CenterModeCarousel({title,selectedGenre, movies,handlePlayVideo,}) {
   const settings = {
     className: "center",
     centerMode: true,

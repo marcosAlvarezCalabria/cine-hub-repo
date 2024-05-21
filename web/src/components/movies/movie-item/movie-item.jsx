@@ -28,8 +28,13 @@ function MovieItem({ movie, handlePlayVideo }) {
       console.error("An error occurred while updating favorites:", error);
     }
   }
+  const handleUrlVideo = (e) =>{
+    handlePlayVideo(movie.trailerId)
+    
 
-  console.log(movie.releaseDate)
+  }
+
+ 
   return (
 
     <div className="row">
@@ -45,7 +50,7 @@ function MovieItem({ movie, handlePlayVideo }) {
           <div className="card-body">
             <div className="play-video">
               <i
-                onClick={handlePlayVideo}
+                onClick={handleUrlVideo}
                 className="fa fa-play play_button"
                 data-toggle="tooltip"
                 data-placement="bottom"

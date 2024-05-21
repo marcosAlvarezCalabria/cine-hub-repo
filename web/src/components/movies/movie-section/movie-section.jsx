@@ -5,24 +5,29 @@ import "./movie-section.css";
 
 function MoviesSection({ selectedGenre, title }) {
     const [showVideo, setShowVideo] = useState(false);
+    const [trailerId, setTrailerId] = useState("")
+    
 
-    const handlePlayVideo = () => {
-        console.log("aqui desde moviesection");
+    const handlePlayVideo = (trailerId) => {
+        console.log("aqui desde moviesection", trailerId);
         setShowVideo(!showVideo);
+        setTrailerId(trailerId)
+        
     };
-
+   
     return (
         <div className="movieSection">
             {showVideo && (
                 <div className="video-overlay" onClick={() => setShowVideo(false)}>
                     <div className="video-container" onClick={(e) => e.stopPropagation()}>
-                        <VideoPlayer />
+                        <VideoPlayer trailerId={trailerId} />
                     </div>
                 </div>
             )}
             <MoviesList
                 title={title}
                 carouselType={"CenterModeCarousel"}
+                
                 handlePlayVideo={handlePlayVideo}
                 filter={selectedGenre}
             />

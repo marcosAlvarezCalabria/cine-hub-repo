@@ -9,7 +9,7 @@ import CarouselMainSection from "../../carousel -main-section/carusel-main-secti
 
 
 
-function MoviesList({ title, genre, filter, handlePlayVideo, carouselType }) {
+function MoviesList({ title, genre, filter, handlePlayVideo, carouselType, handleVideo }) {
     const [movies, setMovies] = useState([]);
     const { user } = useContext(AuthContext);
     const [searchedGenre, setSearchedGenre] = useState("")
@@ -43,7 +43,7 @@ function MoviesList({ title, genre, filter, handlePlayVideo, carouselType }) {
     if (carouselType === "CenterModeCarousel") {
         return (
             
-                <CenterModeCarousel title={title} selectedGenre={filter} handlePlayVideo={handlePlayVideo} movies={movies} />
+                <CenterModeCarousel title={title} selectedGenre={filter} handleVideo={handleVideo} handlePlayVideo={handlePlayVideo} movies={movies} />
             
         );
     } else if (carouselType === "CarouselPauseOnHover") {
