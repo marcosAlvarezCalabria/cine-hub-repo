@@ -13,6 +13,7 @@ VITE_GOOGLE_API_KEY = ""
 [env]
 CORS_ORIGIN = "https://cine-hub.fly.dev"
 
+
 [http_service]
   internal_port = 3000
   force_https = true

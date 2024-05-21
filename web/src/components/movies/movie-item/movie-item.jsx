@@ -60,7 +60,7 @@ function MovieItem({ movie, handlePlayVideo }) {
 
             </div>
             <div className="rating">
-              <Rating readOnly="true" value={movie.voteAverage - 5}></Rating>
+              <Rating readOnly="true" value={movie.voteAverage/3}></Rating>
             </div>
             <div className="release-date">
               <h5> {new Date(movie?.releaseDate).toLocaleDateString({ year: 'numeric', month: 'long', day: 'numeric' })}</h5>

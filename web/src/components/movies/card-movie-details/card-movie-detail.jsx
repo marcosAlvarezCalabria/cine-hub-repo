@@ -53,7 +53,7 @@ function CardMovieDetail({ movie, error, handleComments,handlePlayVideo }) {
                                         ))}
                                     </div>
                                     <div className="div-rating d-flex justify-content-between">
-                                        <Rating name="read-only" value={movie.voteAverage} readOnly />
+                                        <Rating name="read-only" value={movie.voteAverage/3} readOnly />
                                        <span className="" data-toggle="modal" data-target="#exampleModalCenter" role="button" onClick={handleCallVideo}>
                                        <PlayCircleIcon fontSize="large" color="warning"/>
                                         </span> 
