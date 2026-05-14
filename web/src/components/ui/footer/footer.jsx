@@ -1,11 +1,15 @@
-function Footer(){
-    return(
-        <footer className="footer mt-auto py-3 bg-dark">
-            <div className="container text-center">
-                <span className="text-light">©2023 MarcosAlvarez Direct, LLC. All Rights Reserved. CineHub™ is used under license.</span>
-            </div>
-            
-        </footer>
-    )
+import "./footer.css";
+
+function Footer() {
+  return (
+    <footer className="app-footer">
+      <div className="container app-footer__inner">
+        <span className="app-footer__eyebrow">CineHub</span>
+        <span className="app-footer__text">Movie discovery, personal favorites and community comments in one place.</span>
+        <span className="app-footer__meta">© 2026 Marcos Alvarez Calabria. Built as a portfolio project.</span>
+      </div>
+    </footer>
+  );
 }
-export default Footer
+
+export default Footer;
