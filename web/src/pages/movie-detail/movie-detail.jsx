@@ -39,14 +39,14 @@ function MovieDetail() {
    const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const commentsA = movie?.comments;
-    const showForm = commentsA?.some(comment => comment.author.email === user.email);
+    const commentsA = movie?.comments || [];
+    const showForm = commentsA.some((comment) => comment.author?.email === user?.email);
 
     return (
         <div className="container-fluid container-movie-detail">
             <h2>Movie Details</h2>
             <CardMovieDetail handlePlayVideo={handleOpen} handleComments={handleComments} movie={movie} error={error} />
-            {!showForm && <CommentsForm handleComments={handleComments} movie={movie} />}
+            {movie && !showForm && <CommentsForm handleComments={handleComments} movie={movie} />}
              <BasicModal open={open} whatToShow={movie?.trailerId}  handleClose={handleClose}/> 
         </div>
     );

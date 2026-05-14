@@ -11,20 +11,16 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 function CardMovieDetail({ movie, error, handleComments,handlePlayVideo }) {
     const { user } = useContext(AuthContext);
-    const [deleteUniqComment, setDeleteUniqComment] = useState(false);
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
-        const commentsA = movie?.comments;
-        const showButtonDelete = commentsA?.some(comment => comment.author.email === user.email);
-        if (!showButtonDelete) {
-            setShowButton(!showButton);
-        }
-    }, [deleteComment]);
+        const commentsA = movie?.comments || [];
+        const hasUserComment = commentsA.some((comment) => comment.author?.email === user?.email);
+        setShowButton(!hasUserComment);
+    }, [movie?.comments, user?.email]);
 
     const handleDeleteComment = (id) => {
         deleteComment(id);
-        setDeleteUniqComment(!deleteComment);
         handleComments();
     };
    const handleCallVideo = () => {
@@ -48,7 +44,7 @@ function CardMovieDetail({ movie, error, handleComments,handlePlayVideo }) {
                                 <div className="p-3 div-body">
                                     <h2>{movie?.title}</h2>
                                     <div className="d-flex flex-row div-genres">
-                                        {movie.genres.map((genre, index) => (
+                                        {(movie.genres || []).map((genre, index) => (
                                             <p className="me-2" key={index}>{genre.toUpperCase()}</p>
                                         ))}
                                     </div>
@@ -67,7 +63,7 @@ function CardMovieDetail({ movie, error, handleComments,handlePlayVideo }) {
                             <div className="list-comments">
                                 <h3>Comments:</h3>
                                 <ul className="list-group">
-                                    {movie.comments.map((comment, index) => (
+                                    {(movie.comments || []).map((comment, index) => (
                                         <ItemListDetail
                                             key={index}
                                             comment={comment}

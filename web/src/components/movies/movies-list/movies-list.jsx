@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import CenterModeCarousel from "../../ui/carousel/center-mode-carousel";
 import AuthContext from "../../../contexts/auth.context";
-import { getMovies, getUserProfile } from "../../../services/api.services";
+import { getMovies } from "../../../services/api.services";
 import CarouselPauseOnHover from "../../carousel-pause-on-hover/carousel-pause-on-hover";
 import CarouselMainSection from "../../carousel -main-section/carusel-main-section";
 
@@ -25,7 +25,6 @@ function MoviesList({ title, genre, filter, handlePlayVideo, carouselType, handl
                 setSearchedGenre(query.genres || "")
                 const { data: movies } = await getMovies(query)
                 setMovies(movies)
-                await getUserProfile(user)
 
             }
 

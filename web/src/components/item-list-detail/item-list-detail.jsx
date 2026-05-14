@@ -11,12 +11,12 @@ function ItemListDetail({ comment, handleDeleteComment }) {
     const theme = useTheme();
 
     useEffect(() => {
-        if (comment.author?.id === user.id) {
+        if (comment.author?.id === user?.id) {
             setShowButtonDelete(true);
         } else {
             setShowButtonDelete(false);
         }
-    }, [comment.author?.id, user.id]);
+    }, [comment.author?.id, user?.id]);
 
     return (
         <li className="list-item list-group-item list-group-item-dark">
@@ -26,7 +26,7 @@ function ItemListDetail({ comment, handleDeleteComment }) {
                         <Avatar>{comment?.author?.name?.charAt(0)}</Avatar>
                     </div>
                     <div className="name-author">
-                        <p className="mb-0">{comment.author.name}</p>
+                        <p className="mb-0">{comment.author?.name || "Anonymous"}</p>
                     </div>
                 </div>
                 <div className="div-rating">

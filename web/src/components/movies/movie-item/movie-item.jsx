@@ -10,12 +10,23 @@ import Rating from '@mui/material/Rating';
 function MovieItem({ movie, handlePlayVideo }) {
   const { user, fetchProfile } = useContext(AuthContext);
   const [isFavorite, setIsFavorite] = useState(false);
+  const formattedReleaseDate = movie?.releaseDate
+    ? new Date(movie.releaseDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "Release date unavailable";
 
   useEffect(() => {
-    setIsFavorite(user.favorites.includes(movie?.id));
-  }, [movie?.id, user.favorites]);
+    setIsFavorite(Boolean(user?.favorites?.includes(movie?.id)));
+  }, [movie?.id, user?.favorites]);
 
   async function handleFavorites() {
+    if (!user) {
+      return;
+    }
+
     try {
       if (isFavorite) {
         await removeFavorites(movie.id, user.id);
@@ -68,7 +79,7 @@ function MovieItem({ movie, handlePlayVideo }) {
               <Rating readOnly="true" value={movie.voteAverage/3}></Rating>
             </div>
             <div className="release-date">
-              <h5> {new Date(movie?.releaseDate).toLocaleDateString({ year: 'numeric', month: 'long', day: 'numeric' })}</h5>
+              <h5>{formattedReleaseDate}</h5>
             </div>
           </div>
         </div>
