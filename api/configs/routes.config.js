@@ -1,41 +1,43 @@
-const express = require ("express");
-const router = express.Router();
-const movie = require("../controllers/movies.controller")
+const express = require("express");
+const rateLimit = require("express-rate-limit");
+const movie = require("../controllers/movies.controller");
 const user = require("../controllers/users.controllers");
-const comments = require("../controllers/comments.controllers")
-const authMiddleware = require ("../middlewares/auth.middleware.js")
+const comments = require("../controllers/comments.controllers");
+const authMiddleware = require("../middlewares/auth.middleware.js");
 
-/***************movies********* */
+const router = express.Router();
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { message: "Too many authentication attempts. Please try again later." },
+});
+
 router.get("/movies", authMiddleware.checkAuth, movie.list);
 router.get("/movies/:id", movie.detail);
 
-//*****************user******** */
-router.post("/user", user.create);
-router.get("/profile",authMiddleware.checkAuth, user.profile);
-router.post("/login", user.login)
-router.patch("/profile" ,authMiddleware.checkAuth, user.update)//update
-router.delete("/user",authMiddleware.checkAuth, user.delete)
+router.post("/user", authLimiter, user.create);
+router.get("/profile", authMiddleware.checkAuth, user.profile);
+router.post("/login", authLimiter, user.login);
+router.post("/logout", authMiddleware.checkAuth, user.logout);
+router.patch("/profile", authMiddleware.checkAuth, user.update);
+router.delete("/user", authMiddleware.checkAuth, user.delete);
 
-/*********************comments***** */
-router.post("/movie/:id/comments",authMiddleware.checkAuth,comments.create)
-router.patch("/movie/:id/comments", comments.update)
-router.delete("/movie/:id/comments", comments.delete)
+router.post("/movie/:id/comments", authMiddleware.checkAuth, comments.create);
+router.patch("/movie/:id/comments", authMiddleware.checkAuth, comments.update);
+router.delete("/movie/:id/comments", authMiddleware.checkAuth, comments.delete);
 
-/*****************favorites***************** */
+router.patch("/user/favorites/:id/remove", authMiddleware.checkAuth, user.removeFavorites);
 
-router.patch("/user/favorites/:id/remove",authMiddleware.checkAuth, user.removeFavorites)
-
-//*******error handlers************* */
-
-router.use ((req, res, next) => {
-    res.status(404).json({ message:"Route not found" });
+router.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
 });
+
 router.use((err, req, res, next) => {
-    console.error(err)
-
-    res.status(500).json({message : "Internal server error"})
-})
-
-
+  console.error(err);
+  res.status(500).json({ message: "Internal server error" });
+});
 
 module.exports = router;

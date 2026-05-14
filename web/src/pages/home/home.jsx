@@ -1,66 +1,72 @@
 import PageLayout from "../../components/layouts/page-layout/page-layout";
-import { Link, useNavigate } from "react-router-dom";
-import("./home.css")
-import backgroundHome from "../../assets/images/image.jpg"
+import { Link } from "react-router-dom";
+import "./home.css";
+import backgroundHome from "../../assets/images/image.jpg";
 import AutoPlay from "../../components/auto-play/auto-play";
 import AskList from "../../components/ask-list/ask-list";
 
-
-
-
-
-
-
 function Home() {
-
-//   const navigate = useNavigate()
-// const  handlePlaceChanged = ( { lat, lng, address }) => {
-//   navigate ({
-//     pathname: `/maps`,
-//     search: `?lat=${lat}&lng=${lng}&address=${address}`
-//   })
-//  }
-
   return (
-
     <PageLayout background={backgroundHome}>
-     
-      <section className="text-center">
-        <div className="d-flex flex-column justify-content-center align-items-center vh-100">
-          <div className="row justify-content-center">
-            <h1 className="big-text col-sm-12 col-md-6">Welcome to CineHub, where every movie tells a story and every story ignites imagination.</h1>
+      <section className="home-page">
+        <div className="home-page__hero container">
+          <div className="home-page__copy">
+            <span className="home-page__eyebrow">Curated Movie Discovery</span>
+            <h1 className="home-page__title">Track favorites, explore genres and keep the conversation going after the credits.</h1>
+            <p className="home-page__description">
+              CineHub turns a simple movie catalog into a more cinematic experience, with trailers, personal picks and community comments in one flow.
+            </p>
+            <div className="home-page__actions">
+              <Link to="/main" className="home-page__button home-page__button--primary">
+                Explore movies
+              </Link>
+              <Link to="/register" className="home-page__button home-page__button--secondary">
+                Create account
+              </Link>
+            </div>
+            <div className="home-page__stats">
+              <div>
+                <strong>Trailers</strong>
+                <span>Preview before you commit to a film night.</span>
+              </div>
+              <div>
+                <strong>Favorites</strong>
+                <span>Save the titles you want to revisit later.</span>
+              </div>
+              <div>
+                <strong>Comments</strong>
+                <span>Share opinions and discover what others noticed.</span>
+              </div>
+            </div>
           </div>
-          {/* <AutoCompleteInput onPlaceChange={handlePlaceChanged}/> */}
-          
-          <div className="mb-3">
-            <Link to="/main">
-              <button className="btn btn-danger btn-custom">Get started </button>
-            </Link>
+        </div>
+
+        <div className="home-page__section">
+          <div className="container">
+            <div className="home-page__section-heading">
+              <span>Featured picks</span>
+              <h2>Browse the catalog through a cleaner, more immersive carousel.</h2>
+            </div>
+            <div className="home-page__panel">
+              <AutoPlay className="align-item-center" />
+            </div>
           </div>
         </div>
-        <div className="separation-line"></div>
-        <div className="d-flex flex-column align-items-center mt-4">
-        <h3 className=" text-section-2 col-sm-12 col-md-6">You can comment on your favorite movies</h3>
-          <div className="background-slider p-5 container d-flex align-item-center">
-         
-           <AutoPlay className="align-item-center"/>
-          
-        </div>
-        <div className="background-slider p-5 container d-flex align-item-center">
-         
-           <AskList className="align-item-center"/>
-          
-        </div>
+
+        <div className="home-page__section home-page__section--faq">
+          <div className="container">
+            <div className="home-page__section-heading">
+              <span>How it works</span>
+              <h2>Everything needed to start using CineHub is visible at a glance.</h2>
+            </div>
+            <div className="home-page__panel">
+              <AskList className="align-item-center" />
+            </div>
+          </div>
         </div>
       </section>
     </PageLayout>
-
-
-
-  )
+  );
 }
 
 export default Home;
-
-
-

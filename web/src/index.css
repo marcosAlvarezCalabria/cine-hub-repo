@@ -1,9 +1,51 @@
-
 :root {
-  --primary-color: #33555b;
-  font-family: 'Roboto Condensed', sans-serif;
+  --bg: #07111f;
+  --bg-elevated: #0e1a2b;
+  --surface: rgba(9, 18, 32, 0.84);
+  --surface-strong: rgba(6, 12, 24, 0.94);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f5f7fb;
+  --text-muted: #a9b4c8;
+  --accent: #ff5d3d;
+  --accent-soft: #ff8f57;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 93, 61, 0.2), transparent 30%),
+    linear-gradient(180deg, #09111f 0%, #050913 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 93, 61, 0.18), transparent 30%),
+    linear-gradient(180deg, #09111f 0%, #050913 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }

@@ -1,84 +1,68 @@
 import axios from "axios";
 
-
-
 const http = axios.create({
-    baseURL:import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api/v1"
+  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api/v1",
+  withCredentials: true,
 });
-//request interceptors
-http.interceptors.request.use(function (config) {
-    config.headers.authorization = `BEARER ${localStorage.getItem("token")}`
-   return config
-})
-//response interceptors
+
 http.interceptors.response.use(
-    function (response) {
-      return response;
-    },
-    function (error) {
-      if (
-        error.response?.status === 401 &&
-        location.pathname !== "/login" &&
-        location.pathname !== "/register"
-      ) {
-        // navigate refreshing page
-        localStorage.removeItem("token");
-        window.location.replace("/login");
-      }
-  
-      return Promise.reject(error);
+  function (response) {
+    return response;
+  },
+  function (error) {
+    if (
+      error.response?.status === 401 &&
+      location.pathname !== "/" &&
+      location.pathname !== "/login" &&
+      location.pathname !== "/register"
+    ) {
+      window.location.replace("/login");
     }
-  );
-  
-  
+
+    return Promise.reject(error);
+  }
+);
 
 export function createUser(data) {
-    return http.post("/user", data)
+  return http.post("/user", data);
 }
+
 export function login(data) {
-    return http.post("/login", data)
-        .then((response) => {
-            localStorage.setItem("token", response.data.accessToken)
-            return response
-        })
+  return http.post("/login", data);
 }
 
 export function getUserProfile(data) {
-   return http.get("/profile", data)
+  return http.get("/profile", data);
 }
 
 export function updateUser(data) {
-  console.log(`update user y la data ${data.email}`)
-  return http.patch("/profile", data)
+  return http.patch("/profile", data);
 }
 
 export function logout() {
-  localStorage.removeItem("token");
+  return http.post("/logout");
 }
 
 export function getMovies(params) {
-  //console.log(params)
-  return http.get("/movies", { params })
-
+  return http.get("/movies", { params });
 }
-export function getMovieDetails(id){
- 
-  return http.get(`/movies/${id}`)
+
+export function getMovieDetails(id) {
+  return http.get(`/movies/${id}`);
 }
 
 export function createComment(data, movieId) {
- // console.log(`esto es la data desde createComment ${data.comments}`)
-  return http.post(`/movie/${movieId}/comments`,data)
+  return http.post(`/movie/${movieId}/comments`, data);
 }
 
-export function removeFavorites(movieId,userId){
-  //console.log(`esto es la data desde removeFavorites ${params}`)
+export function removeFavorites(movieId, userId) {
   const data = {
-    movieId:movieId
-  }
-  return http.patch(`/user/favorites/${userId}/remove`,data)
+    movieId: movieId,
+  };
+
+  return http.patch(`/user/favorites/${userId}/remove`, data);
 }
-export function deleteComment(id){
-  return http.delete(`/movie/${id}/comments`)
+
+export function deleteComment(id) {
+  return http.delete(`/movie/${id}/comments`);
 }
-//router.delete("/movie/:id/comments", comments.delete)

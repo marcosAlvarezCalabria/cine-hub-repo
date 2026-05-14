@@ -1,14 +1,15 @@
+const cors = require("cors");
+const { allowedOrigins } = require("../configs/env.config");
 
-function cors(req, res, next){
-    res.setHeader("Access-Control-Allow-Origin", process.env.CORS_ORIGIN);
-    res.setHeader("Access-Control-Allow-Headers", "content-type,authorization");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
-
-    if (req.method === 'OPTIONS') {
-        return res.sendStatus(200);
+module.exports = cors({
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
     }
-    
-    next();
-}
 
-module.exports = cors;
+    return callback(new Error("Origin not allowed by CORS"));
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+});
