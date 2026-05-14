@@ -32,7 +32,7 @@ const schema = new Schema(
       enum: genres,
       required: true,
     },
-    favorites: [{ type: Schema.Types.ObjectId, ref: "Movie" }],
+    favorites: [{ type: Number }],
     location: {
       type: {
         type: String,

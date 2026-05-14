@@ -67,7 +67,10 @@ module.exports.profile = (req, res) => {
 
 module.exports.update = (req, res, next) => {
   const { name, email, birthDate, genre, location, favorites } = req.body;
-  const body = { name, email, birthDate, genre, location, favorites };
+  const normalizedFavorites = Array.isArray(favorites)
+    ? favorites.map((favorite) => Number.parseInt(favorite, 10)).filter((favorite) => !Number.isNaN(favorite))
+    : [];
+  const body = { name, email, birthDate, genre, location, favorites: normalizedFavorites };
 
   User.findByIdAndUpdate(req.user.id, body, { runValidators: true, new: true })
     .then((user) => {
@@ -94,7 +97,11 @@ module.exports.delete = (req, res, next) => {
 };
 
 module.exports.removeFavorites = (req, res, next) => {
-  const { movieId } = req.body;
+  const movieId = Number.parseInt(req.body.movieId, 10);
+
+  if (Number.isNaN(movieId)) {
+    return res.status(400).json({ message: "Invalid movie id" });
+  }
 
   User.findByIdAndUpdate(req.user.id, { $pull: { favorites: movieId } }, { new: true, runValidators: true })
     .then((updatedUser) => {

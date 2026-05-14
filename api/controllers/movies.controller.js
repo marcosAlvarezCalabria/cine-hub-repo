@@ -1,39 +1,31 @@
-const mongoose = require("mongoose");
-const Movie = require("../models/movie.model");
+const Comment = require("../models/comment.model");
+const { getMovieById, listMoviesByGenre } = require("../services/tmdb.service");
 
+module.exports.detail = async (req, res, next) => {
+  try {
+    const movie = await getMovieById(req.params.id);
 
+    if (!movie) {
+      return res.status(404).json({ message: "Movie not found" });
+    }
 
-module.exports.detail = (req, res, next) => {
-    const movieId = req.params.id
-    Movie.findById(movieId)
-        .populate({
-            path: "comments",
-            populate: {
-                path: "author",
-                model: "User"
-            }
-        })
-        
-        .then((movie) => {
-            if (movie) {
-                res.json(movie)
-            } else {
-                res.status(404).json({message : "Movie not found"})
-            }
-        })
-        .catch((error) => next(error))
+    const comments = await Comment.find({ movie: movie.id }).populate("author");
 
-}
+    return res.json({
+      ...movie,
+      comments,
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
 
-module.exports.list = (req, res, next) => {
+module.exports.list = async (req, res, next) => {
+  try {
     const { genres } = req.query;
-    const criterial = {}
-    if (genres) criterial.genres = genres
-
-
-
-  
-    Movie.find(criterial)
-        .then((movies) => res.json(movies))
-        .catch(next)
-}
+    const movies = await listMoviesByGenre(genres);
+    return res.json(movies);
+  } catch (error) {
+    return next(error);
+  }
+};
