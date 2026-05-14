@@ -21,7 +21,7 @@ function CarouselMainSection({ movies }) {
             {limitedMovies.map((movie) => (
                 <div key={movie.id} className="carrousel-main position-relative">
                     <div className="position-absolute start-0 w-100 h-100 bg-dark opacity-50"></div>
-                    <img src={movie.posterURL} className="img-fluid" alt={movie.title} />
+                    <img src={movie.posterURL} className="img-fluid carrousel-main__image" alt={movie.title} />
                     <div className="position-absolute bottom-0 p-3 p-md-5 start-0 text-light movie-content">
                         <div className="row">
                             <div className="col-12 col-md-8 col-lg-6">

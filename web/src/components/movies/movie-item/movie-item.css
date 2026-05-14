@@ -1,86 +1,109 @@
-.movie_card{
-    padding: 0 !important;
-    background-color: #282525;
+.movie_card {
+  height: 100%;
+  padding: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(38, 36, 36, 0.96) 0%, rgba(15, 15, 18, 0.98) 100%);
+  overflow: hidden;
 }
 
-.movie_card img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 10rem;
+.movie_card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.movie_info{
-    color: #fffafa;
-    font-size: 20px;
+.movie_info {
+  color: #fffafa;
+  font-size: 20px;
 }
 
-.card-title{
-    width: 100%;
-    height: 4rem;
-    color: white;
-   
+.card-title {
+  width: 100%;
+  min-height: 3.6rem;
+  margin: 0;
+  color: white;
 }
 
-.play_button{
-    background-color: #ff3d49;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    right: 5px;
-    bottom: 150px;
-    font-size: 20px;
-    padding-left: 14px;
-    padding-top: 10px;
-    color: #000000;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.play_button:hover{
-    transform: scale(1.2);
+.movie_card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  min-height: 13.5rem;
+  padding: 1rem 1rem 1.15rem;
 }
 
-.credits{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 2px solid #8e24aa;
-    font-size: 18px;
+.play_button {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff3d49;
+  font-size: 20px;
+  padding-left: 14px;
+  padding-top: 10px;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.credits .card-body{
-    padding: 0;
+.play_button:hover {
+  transform: scale(1.2);
 }
 
-.fa-heart{
-    color: red;
-    position: absolute;
-
+.credits {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #8e24aa;
+  font-size: 18px;
 }
+
+.credits .card-body {
+  padding: 0;
+}
+
+.fa-heart {
+  color: red;
+  position: absolute;
+}
+
 .image-container {
-    position: relative;
-  }
-  
-  .favorite-icon {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .favorite-icon:hover {
-    transform: scale(1.2);
-  }
-  
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
 
-  
-  @media (max-width: 768px) {
-    .play_button {
-      font-size: 0.9rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
-      width: 25px;
-      height: 25px;
-      padding-left: 7px;
-      padding-top: 6px;
-    }
+.favorite-icon {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.favorite-icon:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .movie_card .card-body {
+    min-height: 12rem;
+    padding: 0.9rem;
   }
+
+  .play_button {
+    width: 25px;
+    height: 25px;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    font-size: 0.9rem;
+    padding-left: 7px;
+    padding-top: 6px;
+  }
+}

@@ -50,6 +50,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.movie-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
 .movie-card:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
