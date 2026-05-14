@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
+const { env } = require("./env.config");
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017//film-find";
-
-mongoose.connect(MONGODB_URI)
-    .then(() => console.info (`Successfully connected to the database ${MONGODB_URI} `))
-    .catch((error) => console.error(`An error ocurred trying to connect to the database:${MONGODB_URI}`,error))
-
-
+mongoose
+  .connect(env.MONGODB_URI)
+  .then(() => console.info(`Successfully connected to the database ${env.MONGODB_URI}`))
+  .catch((error) => {
+    console.error(`An error occurred trying to connect to the database: ${env.MONGODB_URI}`, error);
+    process.exit(1);
+  });

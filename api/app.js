@@ -2,24 +2,23 @@ require("dotenv").config();
 
 const express = require("express");
 const logger = require("morgan");
-const cors = require("./middlewares/cors.middleware")
+const helmet = require("helmet");
+const cookieParser = require("cookie-parser");
+const cors = require("./middlewares/cors.middleware");
+const { env } = require("./configs/env.config");
 
-require("./configs/db.config")
+require("./configs/db.config");
 
 const app = express();
-//Middlewares
 
 app.use(logger("dev"));
-app.use(express.json());
+app.use(helmet());
+app.use(cookieParser());
 app.use(cors);
+app.use(express.json());
 
-//Routes
-
-app.use("/api/v1", require ("./configs/routes.config"));
-
+app.use("/api/v1", require("./configs/routes.config"));
 app.use("/", require("./web"));
 
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.info(`Application running in port ${port}`))
-
+const port = env.PORT;
+app.listen(port, () => console.info(`Application running in port ${port}`));
