@@ -8,6 +8,17 @@ function hasTmdbCredentials() {
   return Boolean(process.env.TMDB_BEARER_TOKEN || process.env.TMDB_API_KEY);
 }
 
+function listLocalMovies(genreName) {
+  return localMovies
+    .map((movie) => normalizeMovie(movie))
+    .filter((movie) => !genreName || movie.genres.includes(genreName));
+}
+
+function getLocalMovieById(movieId) {
+  const localMovie = localMovies.find((movie) => movie.id === movieId);
+  return localMovie ? normalizeMovie(localMovie) : null;
+}
+
 function buildRequestUrl(endpoint, params = {}) {
   const url = new URL(`${TMDB_API_BASE_URL}${endpoint}`);
 
@@ -80,41 +91,44 @@ async function resolveGenreByName(genreName) {
 
 async function listMoviesByGenre(genreName) {
   if (!hasTmdbCredentials()) {
-    return localMovies
-      .map((movie) => normalizeMovie(movie))
-      .filter((movie) => !genreName || movie.genres.includes(genreName));
+    return listLocalMovies(genreName);
   }
 
-  const params = {
-    include_adult: "false",
-    include_video: "false",
-    language: "en-US",
-    page: 1,
-    sort_by: "popularity.desc",
-    vote_count_gte: "250",
-  };
+  try {
+    const params = {
+      include_adult: "false",
+      include_video: "false",
+      language: "en-US",
+      page: 1,
+      sort_by: "popularity.desc",
+      vote_count_gte: "250",
+    };
 
-  let payload = await tmdbFetch("/discover/movie", params);
+    let payload = await tmdbFetch("/discover/movie", params);
 
-  if (genreName) {
-    const matchingGenre = await resolveGenreByName(genreName);
+    if (genreName) {
+      const matchingGenre = await resolveGenreByName(genreName);
 
-    if (!matchingGenre) {
-      return [];
+      if (!matchingGenre) {
+        return [];
+      }
+
+      payload = await tmdbFetch("/discover/movie", {
+        ...params,
+        with_genres: matchingGenre.id,
+      });
     }
 
-    payload = await tmdbFetch("/discover/movie", {
-      ...params,
-      with_genres: matchingGenre.id,
-    });
+    return Promise.all(
+      (payload.results || []).map(async (movie) => {
+        const trailerId = await fetchTrailerId(movie.id);
+        return normalizeMovie(movie, trailerId);
+      })
+    );
+  } catch (error) {
+    console.warn(`Falling back to local movies catalog: ${error.message}`);
+    return listLocalMovies(genreName);
   }
-
-  return Promise.all(
-    (payload.results || []).map(async (movie) => {
-      const trailerId = await fetchTrailerId(movie.id);
-      return normalizeMovie(movie, trailerId);
-    })
-  );
 }
 
 async function getMovieById(movieId) {
@@ -125,13 +139,17 @@ async function getMovieById(movieId) {
   }
 
   if (!hasTmdbCredentials()) {
-    const localMovie = localMovies.find((movie) => movie.id === numericMovieId);
-    return localMovie ? normalizeMovie(localMovie) : null;
+    return getLocalMovieById(numericMovieId);
   }
 
-  const movie = await tmdbFetch(`/movie/${numericMovieId}`, { language: "en-US" });
-  const trailerId = await fetchTrailerId(numericMovieId);
-  return normalizeMovie(movie, trailerId);
+  try {
+    const movie = await tmdbFetch(`/movie/${numericMovieId}`, { language: "en-US" });
+    const trailerId = await fetchTrailerId(numericMovieId);
+    return normalizeMovie(movie, trailerId);
+  } catch (error) {
+    console.warn(`Falling back to local movie detail: ${error.message}`);
+    return getLocalMovieById(numericMovieId);
+  }
 }
 
 module.exports = {

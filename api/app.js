@@ -11,8 +11,33 @@ require("./configs/db.config");
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 app.use(logger("dev"));
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        baseUri: ["'self'"],
+        fontSrc: ["'self'", "https:", "data:"],
+        formAction: ["'self'"],
+        frameAncestors: ["'self'"],
+        imgSrc: [
+          "'self'",
+          "data:",
+          "https://image.tmdb.org",
+          "https://art-gallery-emea.api.hbo.com",
+        ],
+        objectSrc: ["'none'"],
+        scriptSrc: ["'self'"],
+        scriptSrcAttr: ["'none'"],
+        styleSrc: ["'self'", "https:", "'unsafe-inline'"],
+        upgradeInsecureRequests: [],
+      },
+    },
+  })
+);
 app.use(cookieParser());
 app.use(cors);
 app.use(express.json());
