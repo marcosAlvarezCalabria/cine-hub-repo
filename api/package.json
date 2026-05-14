@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "seeds": "node bin/seeds.js"
+    "seeds": "node bin/seeds.js",
+    "movies:generate": "node bin/generate-movies.js"
   },
   "author": "",
   "license": "ISC",

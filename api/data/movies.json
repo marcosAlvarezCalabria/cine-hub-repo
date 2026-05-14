@@ -1,75 +1,983 @@
 [
-  
   {
-    "id":726871,
-    "title": "Dune",
-    "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
-    "releaseDate": "2021-09-15",
-    "popularity": 550.936,
-    "voteAverage": 7.779,
-    "voteCount": 11608,
-    "genreIds": [878, 12],
-    "posterURL":  "https://art-gallery-emea.api.hbo.com/images/GYUjdLgBiJp5otAEAAAAJ/tile?v=a48240ede85610e40f64dfbe77b5c37e&size=1440x810&compression=low&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:hbo:territory:argentina&language=es-es",
-    "backdropURL":"https://image.tmdb.org/t/p/original/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+    "id": 1007757,
+    "title": "Swapped",
+    "overview": "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a greater threat—one that could endanger not only their species, but the entire valley they call home.",
+    "releaseDate": "2026-05-01",
+    "popularity": 425.2006,
+    "voteAverage": 8.991,
+    "voteCount": 790,
+    "genreIds": [
+      16,
+      10751,
+      12,
+      18,
+      14
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/zMwhWailP1WY7sb6AoE6b8ugoy.jpg",
+    "trailerId": "glgmAwRDP8s"
   },
   {
-    "id":878,
-    "title": "A Clockwork Orange",
-    "overview": "In a near-future Britain, young Alexander DeLarge and his pals get their kicks beating and raping anyone they please. When not destroying the lives of others, Alex swoons to the music of Beethoven. The state, eager to crack down on juvenile crime, gives an incarcerated Alex the option to undergo an invasive procedure that'll rob him of all personal agency. In a time when conscience is a commodity, can Alex change his tune?",
-    "releaseDate": "1971-12-19",
-    "popularity": 58.401,
-    "voteAverage": 8.206,
-    "voteCount": 12467,
-    "genreIds": [878, 80],
-    "posterURL": "https://art-gallery-emea.api.hbo.com/images/GYDbZxAw93SuQKAEAAAAD/tile?v=0032e9ff17d081dd894609ddd0c88193&size=1440x810&compression=low&protection=false&language=es-es",
-    "backdropURL": "https://image.tmdb.org/t/p/original/nLFxvLokHe3bQmrmAfljIfax2jQ.jpg"
+    "id": 1226863,
+    "title": "The Super Mario Galaxy Movie",
+    "overview": "Having thwarted Bowser's previous plot to marry Princess Peach, Mario and Luigi now face a fresh threat in Bowser Jr., who is determined to liberate his father from captivity and restore the family legacy. Alongside companions new and old, the brothers travel across the stars to stop the young heir's crusade.",
+    "releaseDate": "2026-04-01",
+    "popularity": 365.6654,
+    "voteAverage": 6.684,
+    "voteCount": 827,
+    "genreIds": [
+      10751,
+      35,
+      12,
+      14,
+      16
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/eJGWx219ZcEMVQJhAgMiqo8tYY.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/9Z2uDYXqJrlmePznQQJhL6d92Rq.jpg",
+    "trailerId": "En5QZmL5R1s"
   },
   {
-    "id": 10749,
-    "title": "The Great Gatsby",
-    "overview": "An adaptation of F. Scott Fitzgerald's Long Island-set novel, where Midwesterner Nick Carraway is lured into the lavish world of his neighbor, Jay Gatsby. Soon enough, however, Carraway will see through the cracks of Gatsby's nouveau riche existence, where obsession, madness, and tragedy await.",
-    "releaseDate": "2013-05-09",
-    "popularity": 49.774,
-    "voteAverage": 7.37,
-    "voteCount": 11909,
-    "genreIds": [18, 10749],
-    "posterURL":"https://art-gallery-emea.api.hbo.com/images/GYLE5fgQVVcPCOAEAAAAF/tile?v=4a78c445eb869d475e7bbdf49b0f2bde&size=1440x810&compression=low&protection=false&language=es-es",
-    "backdropURL": "https://image.tmdb.org/t/p/original/tb440cwQMRoVHnhYJlzlxfv1ikm.jpg"
+    "id": 687163,
+    "title": "Project Hail Mary",
+    "overview": "Science teacher Ryland Grace wakes up on a spaceship light years from home with no recollection of who he is or how he got there. As his memory returns, he begins to uncover his mission: solve the riddle of the mysterious substance causing the sun to die out. He must call on his scientific knowledge and unorthodox ideas to save everything on Earth from extinction.",
+    "releaseDate": "2026-03-15",
+    "popularity": 377.43,
+    "voteAverage": 8.48,
+    "voteCount": 2868,
+    "genreIds": [
+      878,
+      12
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/8Tfys3mDZVp4tNoH2ktm06a0Tau.jpg",
+    "trailerId": "NKYea63tQmI"
   },
   {
-    "id": 137113,
-    "title": "Edge of Tomorrow",
-    "overview": "Major Bill Cage is an officer who has never seen a day of combat when he is unceremoniously demoted and dropped into combat. Cage is killed within minutes, managing to take an alpha alien down with him. He awakens back at the beginning of the same day and is forced to fight and die again... and again - as physical contact with the alien has thrown him into a time loop.",
-    "releaseDate": "2014-05-27",
-    "popularity": 55.785,
-    "voteAverage": 7.617,
-    "voteCount": 13386,
-    "genreIds": [28, 878],
-    "posterURL": "https://art-gallery-emea.api.hbo.com/images/GYKa1nQNJaLHDwwEAAACY/tile?v=53b58b342deaed2ffe7b1400f00bf968&size=1440x810&compression=low&protection=false&language=es-es",
-    "backdropURL": "https://image.tmdb.org/t/p/original/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg"
+    "id": 1318447,
+    "title": "Apex",
+    "overview": "A grieving woman pushing her limits on a solo adventure in the Australian wild is ensnared in a twisted game with a cunning killer who thinks she's prey.",
+    "releaseDate": "2026-04-24",
+    "popularity": 293.3476,
+    "voteAverage": 6.61,
+    "voteCount": 928,
+    "genreIds": [
+      28,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/gqpXIE9fQNqMgEza73nOZy3aVMR.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/9nzfyiYbmTUXWC4B2kwjl4NAlqO.jpg",
+    "trailerId": "kgv8jf_8dm0"
   },
   {
-    "id": 673,
-    "title": "Harry Potter and the Prisoner of Azkaban",
-    "overview": "Year three at Hogwarts means new fun and challenges as Harry learns the delicate art of approaching a Hippogriff, transforming shape-shifting Boggarts into hilarity and even turning back time. But the term also brings danger: soul-sucking Dementors hover over the school, an ally of the accursed He-Who-Cannot-Be-Named lurks within the castle walls, and fearsome wizard Sirius Black escapes Azkaban. And Harry will confront them all.",
-    "releaseDate": "2004-05-31",
-    "popularity": 135.854,
-    "voteAverage": 8.017,
-    "voteCount": 20896,
-    "genreIds": [12, 14],
-    "posterURL":"https://art-gallery-emea.api.hbo.com/images/GXssObwqZrVVGwwEAAABI/tile?v=c6607201fce0123d23197c10fbd14595&size=1440x810&compression=low&protection=false&language=es-es",
-    "backdropURL": "https://image.tmdb.org/t/p/original/obKmfNexgL4ZP5cAmzdL4KbHHYX.jpg"
+    "id": 1439930,
+    "title": "A Marvel Television Special Presentation - The Punisher: One Last Kill",
+    "overview": "As Frank Castle searches for meaning beyond revenge, an unexpected force pulls him back into the fight.",
+    "releaseDate": "2026-05-12",
+    "popularity": 306.4791,
+    "voteAverage": 8.7,
+    "voteCount": 326,
+    "genreIds": [
+      28,
+      18,
+      80
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/gOggsBCSypNXq0yApYeXe7nnopT.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg",
+    "trailerId": "oSeqs_xeqv4"
   },
   {
-    "id": 62,
-    "title": "2001: A Space Odyssey",
-    "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
-    "releaseDate": "1968-04-02",
-    "popularity": 403.525,
-    "voteAverage": 8.078,
-    "voteCount": 11088,
-    "genreIds": [878, 9648, 12],
-    "posterURL":"https://art-gallery-emea.api.hbo.com/images/GXjS6HAogSI-njwEAAASb/tile?v=b18326a5aa87c68353293552da0a6151&size=1440x810&compression=low&protection=false&language=es-es",
-    "backdropURL": "https://image.tmdb.org/t/p/original/w5IDXtifKntw0ajv2co7jFlTQDM.jpg"
+    "id": 350,
+    "title": "The Devil Wears Prada",
+    "overview": "A young woman from the Midwest gets more than she bargained for when she moves to New York to become a writer and ends up as the assistant to the tyrannical, larger-than-life editor-in-chief of a major fashion magazine.",
+    "releaseDate": "2006-06-29",
+    "popularity": 286.1795,
+    "voteAverage": 7.404,
+    "voteCount": 13353,
+    "genreIds": [
+      18,
+      35
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/8912AsVuS7Sj915apArUFbv6F9L.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/gkh6Nt8DtY1XT4gQsyFq9XAVJlJ.jpg",
+    "trailerId": "t4isatjZ0BM"
+  },
+  {
+    "id": 1523145,
+    "title": "Your Heart Will Be Broken",
+    "overview": "High school student Polina is saved from bullying at her new school and makes a deal with the main bully Bars: he must pretend to be her boyfriend and protect her, and she must do everything he says. During this game, the couple develops real feelings, but her family and classmates have reasons to separate the lovers.",
+    "releaseDate": "2026-03-26",
+    "popularity": 233.9212,
+    "voteAverage": 6.799,
+    "voteCount": 77,
+    "genreIds": [
+      10749,
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
+    "trailerId": null
+  },
+  {
+    "id": 1198994,
+    "title": "Send Help",
+    "overview": "Two colleagues become stranded on a deserted island, the only survivors of a plane crash. On the island, they must overcome past grievances and work together to survive, but ultimately, it's a battle of wills and wits to make it out alive.",
+    "releaseDate": "2026-01-22",
+    "popularity": 199.2239,
+    "voteAverage": 7.044,
+    "voteCount": 1383,
+    "genreIds": [
+      27,
+      53,
+      35
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/mjkS2iAgWj3ik1DTjvI15nHZ7yl.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/gCmfeKmEAZBP5gcXpiqb0gii9rS.jpg",
+    "trailerId": "cOmnmFz_Uzs"
+  },
+  {
+    "id": 931285,
+    "title": "Mortal Kombat II",
+    "overview": "The fan favorite champions—now joined by Johnny Cage himself—are pitted against one another in the ultimate, no-holds barred, gory battle to defeat the dark rule of Shao Kahn that threatens the very existence of the Earthrealm and its defenders.",
+    "releaseDate": "2026-05-06",
+    "popularity": 217.8803,
+    "voteAverage": 7.029,
+    "voteCount": 153,
+    "genreIds": [
+      28,
+      14,
+      12
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/lIsMeDbwntNXSUVHmWMMRXEZOVc.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/4EAAwpylq313qrDqpCxulUrXBNF.jpg",
+    "trailerId": "zva2PQ-ud5Y"
+  },
+  {
+    "id": 1630423,
+    "title": "My Dearest Assassin",
+    "overview": "Hunted for her rare blood type, a caged woman vows to fight alongside the assassin she loves to protect their future when an old enemy resurfaces.",
+    "releaseDate": "2026-05-06",
+    "popularity": 222.0731,
+    "voteAverage": 8.547,
+    "voteCount": 129,
+    "genreIds": [
+      28,
+      18,
+      10749
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/ul4dQcA68mtSx8J56N5gEcaCCtP.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/d1TupF3vMdQ6BhnADkFiNf0ZBOo.jpg",
+    "trailerId": "y1Qq_kPL5UU"
+  },
+  {
+    "id": 1266127,
+    "title": "Ready or Not 2: Here I Come",
+    "overview": "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she’s reached the next level of the nightmarish game — and this time with her estranged sister Faith at her side. Grace has one chance to survive, keep her sister alive, and claim the High Seat of the Council that controls the world. Four rival families are hunting her for the throne, and whoever wins rules it all.",
+    "releaseDate": "2026-03-19",
+    "popularity": 168.9302,
+    "voteAverage": 7.506,
+    "voteCount": 642,
+    "genreIds": [
+      27,
+      35
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/13ZcJzSGEqVgDSqsS9U5EkQwPkV.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/9dMp9t0d0nIGhiil8TyqChwiNwA.jpg",
+    "trailerId": "jczr0KCloXk"
+  },
+  {
+    "id": 83533,
+    "title": "Avatar: Fire and Ash",
+    "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+    "releaseDate": "2025-12-17",
+    "popularity": 155.0351,
+    "voteAverage": 7.435,
+    "voteCount": 2985,
+    "genreIds": [
+      878,
+      12,
+      14
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/aabwWZWx6z1aYP4PX2ADvbDKktd.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/iN41Ccw4DctL8npfmYg1j5Tr1eb.jpg",
+    "trailerId": "Ma1x7ikpid8"
+  },
+  {
+    "id": 1327819,
+    "title": "Hoppers",
+    "overview": "Scientists have discovered how to 'hop' human consciousness into lifelike robotic animals, allowing people to communicate with animals as animals. Animal lover Mabel seizes an opportunity to use the technology, uncovering mysteries within the animal world beyond anything she could have imagined.",
+    "releaseDate": "2026-03-04",
+    "popularity": 152.2041,
+    "voteAverage": 7.973,
+    "voteCount": 994,
+    "genreIds": [
+      16,
+      12,
+      35,
+      10751,
+      878
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/u53UYu5XG2hNgWGvs3xGhAVzypl.jpg",
+    "trailerId": "PypDSyIRRSs"
+  },
+  {
+    "id": 936075,
+    "title": "Michael",
+    "overview": "The story of Michael Jackson, one of the most influential artists the world has ever known, and his life beyond the music. His journey from the discovery of his extraordinary talent as the lead of the Jackson Five, to the visionary artist whose creative ambition fueled a relentless pursuit to become the biggest entertainer in the world, highlighting both his life off-stage and some of the most iconic performances from his early solo career.",
+    "releaseDate": "2026-04-22",
+    "popularity": 149.9455,
+    "voteAverage": 7.6,
+    "voteCount": 683,
+    "genreIds": [
+      10402,
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/3Qud19bBUrrJAzy0Ilm8gRJlJXP.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/xBT0oNq6rsTFv4SxG5uGRIEOrq6.jpg",
+    "trailerId": "k-YAcjaLuSI"
+  },
+  {
+    "id": 1330021,
+    "title": "Remarkably Bright Creatures",
+    "overview": "Through unlikely bonds formed during night shifts at a local aquarium, Tova, an elderly widow, learns of a life-changing discovery that may bring her joy and wonder once again.",
+    "releaseDate": "2026-05-07",
+    "popularity": 142.5317,
+    "voteAverage": 8.4,
+    "voteCount": 167,
+    "genreIds": [
+      18,
+      9648
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/9HcEqn3D4J6b2Z0jK54id9nA0fr.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/bVGHSe47W6oCQL1Q88pvRAet51A.jpg",
+    "trailerId": "b14IFe4an5k"
+  },
+  {
+    "id": 1292415,
+    "title": "Beast",
+    "overview": "MMA legend Patton James, now a commercial fisherman, is pulled back into the cage when his brother is in danger. Reuniting with his old coach Sammy, he commits to one final fight in one championship against the brutal champion Xavier Grau.",
+    "releaseDate": "2026-04-10",
+    "popularity": 141.9089,
+    "voteAverage": 6.643,
+    "voteCount": 21,
+    "genreIds": [
+      28,
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/7NrvUI3vnW8H3rD7ExKcTL7KRcQ.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/hlZGaey4lR9hc4rGxZRAmIEsZOc.jpg",
+    "trailerId": "yJN2mJ4uOas"
+  },
+  {
+    "id": 10867,
+    "title": "Malena",
+    "overview": "12-year-old Renato experiences three significant events on the same day: the beginning of the Second World War, getting a bike, and witnessing the arrival of the gorgeous Malèna. Through his eyes, we see the curse of beauty and loneliness of Malena, whose husband is presumed dead, and, through his soul, we see his love for her.",
+    "releaseDate": "2000-10-27",
+    "popularity": 97.9153,
+    "voteAverage": 7.445,
+    "voteCount": 2556,
+    "genreIds": [
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/3OyQTl0IGkbnjDxd3MhztfPE34g.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/vadUKKQixxOKWkcuZ1SUEoBQeVG.jpg",
+    "trailerId": "73FrJrCgJCI"
+  },
+  {
+    "id": 1669050,
+    "title": "Tayuan 2",
+    "overview": "A charming bus conductor drawn to both men and women who feels an unexpected spark with a shy commuter. On crowded bus rides where bodies brush, desire grows and love becomes messy.",
+    "releaseDate": "2026-04-17",
+    "popularity": 125.9894,
+    "voteAverage": 5.4,
+    "voteCount": 5,
+    "genreIds": [
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/gkHNa8q3RNhgj2EMuoYWJUHsMa6.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/jAJYVbVR5fP0BeTQXRP1BXjW5bl.jpg",
+    "trailerId": "1c-0boR4bq8"
+  },
+  {
+    "id": 1241752,
+    "title": "Rita",
+    "overview": "Rita, who finds herself alone when husband Ariel works abroad. They both find solace and sexual satisfaction in other people. When Ariel comes back, they both act like nothing happened. But will this keep their marriage from falling apart?",
+    "releaseDate": "2024-03-22",
+    "popularity": 126.8827,
+    "voteAverage": 6.1,
+    "voteCount": 21,
+    "genreIds": [
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/pXENxAzOBrTSDJGxDcUnlNTNmWr.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/5AsIFZ2AJC7JcGpq40aRPuRuaRc.jpg",
+    "trailerId": "5tuL8hUpQyk"
+  },
+  {
+    "id": 1613798,
+    "title": "Vengeance",
+    "overview": "The brutal murder of the wife of “Toro,” a military hero in the special forces, turns him into a man with a single purpose: revenge. After a stroke of fate makes him a millionaire, Carlos transforms his fortune into an arsenal and, together with his closest soldiers, sets out to hunt down those responsible.",
+    "releaseDate": "2026-02-26",
+    "popularity": 110.7392,
+    "voteAverage": 7.207,
+    "voteCount": 167,
+    "genreIds": [
+      28,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/xyW8rJO3rwG2EGcTO6eaUEa8b9d.jpg",
+    "trailerId": "w5ImAc3jMsE"
+  },
+  {
+    "id": 1297842,
+    "title": "GOAT",
+    "overview": "A small goat with big dreams gets a once-in-a-lifetime shot to join the pros and play roarball, a high-intensity, co-ed, full-contact sport dominated by the fastest, fiercest animals in the world.",
+    "releaseDate": "2026-02-11",
+    "popularity": 113.7609,
+    "voteAverage": 8.03,
+    "voteCount": 561,
+    "genreIds": [
+      16,
+      35,
+      10751
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/tq3h43fZy0H80vzf47MAY7R9Mxo.jpg",
+    "trailerId": "kmY-rYS7yng"
+  },
+  {
+    "id": 460465,
+    "title": "Mortal Kombat",
+    "overview": "Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung's best warrior, Sub-Zero, seeks out and trains with Earth's greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.",
+    "releaseDate": "2021-04-07",
+    "popularity": 126.9852,
+    "voteAverage": 7.008,
+    "voteCount": 6467,
+    "genreIds": [
+      28,
+      14,
+      12
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/ybrX94xQm8lXYpZAPRmwD9iIbWP.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/6ELCZlTA5lGUops70hKdB83WJxH.jpg",
+    "trailerId": "jBa_aHwCbC4"
+  },
+  {
+    "id": 1292695,
+    "title": "They Will Kill You",
+    "overview": "A woman answers a help wanted ad to be a housekeeper in a mysterious New York City high-rise, unaware that she is entering a community that has seen a number of disappearances over the years and may be under the grip of a Satanic cult.",
+    "releaseDate": "2026-03-25",
+    "popularity": 103.631,
+    "voteAverage": 6.855,
+    "voteCount": 469,
+    "genreIds": [
+      28,
+      35,
+      27
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/6oI4oQKTWMVUlr8Ivqydp28Ruu6.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/qnTdOizsXBzYu3uIbfhHSfE29TE.jpg",
+    "trailerId": "s0PGrtw0X1Q"
+  },
+  {
+    "id": 1426822,
+    "title": "Mortal Game",
+    "overview": "A group of hunters travel to a mysterious island to track down a legendary forest creature. They soon realize their guide has set them up as bait, forcing them to confront a highly intelligent predator that terrorizes them one by one.",
+    "releaseDate": "2025-02-03",
+    "popularity": 118.5375,
+    "voteAverage": 7.7,
+    "voteCount": 3,
+    "genreIds": [
+      27,
+      28
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/iCvucorbs3hFqWshDbLe0fHzB71.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/hdLsZ3dCjKt5A6xDpoo3UFgcTSm.jpg",
+    "trailerId": "CgyPcJdNE7A"
+  },
+  {
+    "id": 1314481,
+    "title": "The Devil Wears Prada 2",
+    "overview": "Andy Sachs returns to Runway as Miranda Priestly navigates a new media landscape and Runway's position within. The duo reconnect with former assistant Emily Charlton, now the head of a luxury brand that possesses funding which could ensure Runway's survival.",
+    "releaseDate": "2026-04-29",
+    "popularity": 97.7808,
+    "voteAverage": 6.7,
+    "voteCount": 491,
+    "genreIds": [
+      35,
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/xTI42pmsP5EDnvsNJPEDubwWBQO.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/y3fQa7pytlysovXzovpXc1OQlTW.jpg",
+    "trailerId": "PMd1at7OwiE"
+  },
+  {
+    "id": 1290821,
+    "title": "Shelter",
+    "overview": "A man living in self-imposed exile on a remote island rescues a young girl from a violent storm, setting off a chain of events that forces him out of seclusion to protect her from enemies tied to his past.",
+    "releaseDate": "2026-01-28",
+    "popularity": 95.1836,
+    "voteAverage": 7.302,
+    "voteCount": 848,
+    "genreIds": [
+      28,
+      80,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/buPFnHZ3xQy6vZEHxbHgL1Pc6CR.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/nHxWyy18SvAZ8jJeemtS8k1UNjM.jpg",
+    "trailerId": "auHiLFjaIc0"
+  },
+  {
+    "id": 980431,
+    "title": "Avatar Aang: The Last Airbender",
+    "overview": "Avatar Aang, the world's last Airbender, learns of an ancient power that could save his culture from extinction. With the help of his friends, he embarks on a global quest to find it before it falls into the wrong hands and threatens to upend the peace they sacrificed everything to achieve.",
+    "releaseDate": "2026-10-09",
+    "popularity": 105.9291,
+    "voteAverage": 0,
+    "voteCount": 0,
+    "genreIds": [
+      16,
+      28,
+      12,
+      14
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/29Jdsak3SrwGds5k1t43kH6Khed.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/sS3zGYFPcfM5pArVNWl6qLyaSmU.jpg",
+    "trailerId": null
+  },
+  {
+    "id": 1038918,
+    "title": "Magistrate Woman Prison Collection II",
+    "overview": "",
+    "releaseDate": "1995-09-21",
+    "popularity": 87.6627,
+    "voteAverage": 6,
+    "voteCount": 1,
+    "genreIds": [
+      18,
+      36
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/i3Ouy0rMUHyKeHZV3PYl106OSwe.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/zADcOKcoplphgtTtXRtTEzzF0qC.jpg",
+    "trailerId": null
+  },
+  {
+    "id": 1311031,
+    "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+    "overview": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
+    "releaseDate": "2025-07-18",
+    "popularity": 89.7763,
+    "voteAverage": 7.701,
+    "voteCount": 825,
+    "genreIds": [
+      16,
+      28,
+      14
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/fWVSwgjpT2D78VUh6X8UBd2rorW.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
+    "trailerId": "EpAlHmuA2YM"
+  },
+  {
+    "id": 1084242,
+    "title": "Zootopia 2",
+    "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+    "releaseDate": "2025-11-26",
+    "popularity": 91.3013,
+    "voteAverage": 7.624,
+    "voteCount": 2724,
+    "genreIds": [
+      12,
+      16,
+      35,
+      10751,
+      9648
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/lgotja3xMoJZbynwHfcQcJAEMWH.jpg",
+    "trailerId": "sEgPQ7HKoBA"
+  },
+  {
+    "id": 1510745,
+    "title": "Bodycam",
+    "overview": "A call to a quiet suburban home unleashes unthinkable carnage when two officers mistakenly shoot a man and his infant child, spiraling the tragedy into a fierce, unrelenting fall into the unknown.",
+    "releaseDate": "2026-03-12",
+    "popularity": 81.0256,
+    "voteAverage": 5.511,
+    "voteCount": 46,
+    "genreIds": [
+      27
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/xFpBNcG3Dlr8mYF5Kz9Tizs3Pxn.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/qmWypRw88VYp35oTQn0a1sqdZRs.jpg",
+    "trailerId": "Ga5xa3iyXKg"
+  },
+  {
+    "id": 1235192,
+    "title": "Wormtown",
+    "overview": "One year into a plague of flesh-eating, mind-altering worms, the nocturnal town of Ashland, Ohio, has embraced the parasites’ rule. Under cult-like Mayor Joshua, zealous Ranchers spread their gospel—by persuasion or by force. A trio of uninfected women cling to survival through scavenging, extreme hygiene, and evasion. But everyone breaks eventually, unleashing betrayal, sacrilege, and body horror.",
+    "releaseDate": "2025-09-27",
+    "popularity": 89.6318,
+    "voteAverage": 5.8,
+    "voteCount": 13,
+    "genreIds": [
+      878,
+      27,
+      12
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/lE10ww38b7XA5LIagIsVQj9a8Hn.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/wfGDy0KVZsiQpGgYoxObUGgccwk.jpg",
+    "trailerId": "-a-KHbdQUF4"
+  },
+  {
+    "id": 249397,
+    "title": "Nymphomaniac: Vol. II",
+    "overview": "The continuation of Joe's sexually dictated life delves into the darker aspects of her adult life and what led to her being in Seligman's care.",
+    "releaseDate": "2013-12-25",
+    "popularity": 84.1688,
+    "voteAverage": 6.706,
+    "voteCount": 3136,
+    "genreIds": [
+      18,
+      9648
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/iLUNqgNKuWn667kXCKztSxYbT3k.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/8qkDwjTFoLAwmYh2J9HMeIDRlxd.jpg",
+    "trailerId": "uSO_gkbdoEw"
+  },
+  {
+    "id": 1242898,
+    "title": "Predator: Badlands",
+    "overview": "Cast out from his clan, a young Predator finds an unlikely ally in a damaged android and embarks on a treacherous journey in search of the ultimate adversary.",
+    "releaseDate": "2025-11-05",
+    "popularity": 78.1629,
+    "voteAverage": 7.701,
+    "voteCount": 2801,
+    "genreIds": [
+      28,
+      878,
+      12
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/gaKFXcB5J1gz0QqYj8bWIfrPc04.jpg",
+    "trailerId": "LkBqjfg8TGM"
+  },
+  {
+    "id": 1301421,
+    "title": "The Sheep Detectives",
+    "overview": "George Hardy is a shepherd who reads detective novels to his beloved sheep every night, assuming they can't possibly understand. But when a mysterious incident disrupts life on the farm, the sheep realize they must become the detectives. As they follow the clues and investigate human suspects, they prove that even sheep can be brilliant crime-solvers.",
+    "releaseDate": "2026-04-30",
+    "popularity": 81.6297,
+    "voteAverage": 7.7,
+    "voteCount": 39,
+    "genreIds": [
+      35,
+      10751,
+      9648
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/6QtL9rl3Zb4d8qW6EJ4qO5hSSfU.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/a8uQvrplTkhGJQog6GZ6CqF8An6.jpg",
+    "trailerId": "826SRt1CFbg"
+  },
+  {
+    "id": 1325734,
+    "title": "The Drama",
+    "overview": "A happily engaged couple is put to the test when an unexpected turn sends their wedding week off the rails.",
+    "releaseDate": "2026-03-26",
+    "popularity": 64.5282,
+    "voteAverage": 6.958,
+    "voteCount": 732,
+    "genreIds": [
+      10749,
+      35,
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/b8H1a89qmNxF8rqFGrG93Q9qn52.jpg",
+    "trailerId": "0ZDzsH3XGFA"
+  },
+  {
+    "id": 755898,
+    "title": "War of the Worlds",
+    "overview": "Will Radford is a top analyst for Homeland Security who tracks potential threats through a mass surveillance program, until one day an attack by an unknown entity leads him to question whether the government is hiding something from him... and from the rest of the world.",
+    "releaseDate": "2025-07-29",
+    "popularity": 77.2285,
+    "voteAverage": 4.135,
+    "voteCount": 985,
+    "genreIds": [
+      878,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/yvirUYrva23IudARHn3mMGVxWqM.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/iZLqwEwUViJdSkGVjePGhxYzbDb.jpg",
+    "trailerId": "d9erkpdh5o0"
+  },
+  {
+    "id": 855435,
+    "title": "Faces of Death",
+    "overview": "A woman, employed as a website content moderator, comes across a series of violent videos reproducing death scenes from a film.",
+    "releaseDate": "2026-04-10",
+    "popularity": 74.1691,
+    "voteAverage": 5.286,
+    "voteCount": 28,
+    "genreIds": [
+      27
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/vPVY3S57lEooBLJCg6KGdMHkUxm.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/r7AKQ0OB69JOPskeTWL3U206ehY.jpg",
+    "trailerId": "bKiX2FBBz54"
+  },
+  {
+    "id": 1414413,
+    "title": "Brothers Under Fire",
+    "overview": "Captain Jordan Wright's squadron on leave for a wedding in Mexico encounters a murderous cartel. As Jordan tries to lead survivors to safety, war erupts between his squad and the cartel, forcing him into a battle to save his men.",
+    "releaseDate": "2026-04-15",
+    "popularity": 71.2086,
+    "voteAverage": 6.237,
+    "voteCount": 19,
+    "genreIds": [
+      28,
+      53,
+      9648,
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/e5EKqk9V7N3w0WvYFhl6wSVrMp0.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/6D2NsU3FIQVthPgjT6RAsX58qZ6.jpg",
+    "trailerId": "DrG4QkBpqMc"
+  },
+  {
+    "id": 510657,
+    "title": "Wellwood",
+    "overview": "Nick makes an extraterrestrial discovery that he decides will cure his wife of her terminal illness.",
+    "releaseDate": "2025-03-24",
+    "popularity": 66.6232,
+    "voteAverage": 5.556,
+    "voteCount": 9,
+    "genreIds": [
+      878,
+      27,
+      18,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/vRwzVKNHeeQ9srX6u2qsuflBozb.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/903T5F2DUV2ve6YIkP92y9gKy95.jpg",
+    "trailerId": "-YPv-U8HL9k"
+  },
+  {
+    "id": 1171145,
+    "title": "Crime 101",
+    "overview": "When an elusive thief whose high-stakes heists unfold along the iconic 101 freeway in Los Angeles eyes the score of a lifetime, with hopes of this being his final job, his path collides with a disillusioned insurance broker who is facing her own crossroads. Determined to crack the case, a relentless detective closes in on the operation, raising the stakes even higher.",
+    "releaseDate": "2026-02-11",
+    "popularity": 60.6469,
+    "voteAverage": 6.958,
+    "voteCount": 921,
+    "genreIds": [
+      80,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/52AkwEfQiJl2HuTPMZ2yC5Bdr9I.jpg",
+    "trailerId": "KeEHsuZ4Ja4"
+  },
+  {
+    "id": 1579,
+    "title": "Apocalypto",
+    "overview": "Set in the Mayan civilization, when a man's idyllic presence is brutally disrupted by a violent invading force, he is taken on a perilous journey to a world ruled by fear and oppression where a harrowing end awaits him. Through a twist of fate and spurred by the power of his love for his woman and his family he will make a desperate break to return home and to ultimately save his way of life.",
+    "releaseDate": "2006-12-07",
+    "popularity": 68.9556,
+    "voteAverage": 7.61,
+    "voteCount": 6266,
+    "genreIds": [
+      28,
+      18,
+      36
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/cRY25Q32kDNPFDkFkxAs6bgCq3L.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/nnmbJvYyDS1VkMOCbxSpdBi3WbJ.jpg",
+    "trailerId": "ngWBddVNVZs"
+  },
+  {
+    "id": 1368166,
+    "title": "The Housemaid",
+    "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+    "releaseDate": "2025-12-18",
+    "popularity": 63.0472,
+    "voteAverage": 7.24,
+    "voteCount": 2069,
+    "genreIds": [
+      9648,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/zTnAnYIn0Iv3cn0ZHlzLhou3ybm.jpg",
+    "trailerId": "BqWH0KDqm3U"
+  },
+  {
+    "id": 840464,
+    "title": "Greenland 2: Migration",
+    "overview": "Having found the safety of the Greenland bunker after the comet Clarke decimated the Earth, the Garrity family must now risk everything to embark on a perilous journey across the wasteland of Europe to find a new home.",
+    "releaseDate": "2026-01-07",
+    "popularity": 68.9796,
+    "voteAverage": 6.408,
+    "voteCount": 1017,
+    "genreIds": [
+      12,
+      53,
+      878
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/z2tqCJLsw6uEJ8nJV8BsQXGa3dr.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/wns4x1GyxCudgOZRyhXKjXVJf3T.jpg",
+    "trailerId": "hiD3zk0ZRFg"
+  },
+  {
+    "id": 157336,
+    "title": "Interstellar",
+    "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "releaseDate": "2014-11-05",
+    "popularity": 65.1496,
+    "voteAverage": 8.472,
+    "voteCount": 39659,
+    "genreIds": [
+      12,
+      18,
+      878
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/2ssWTSVklAEc98frZUQhgtGHx7s.jpg",
+    "trailerId": "LY19rHKAaAg"
+  },
+  {
+    "id": 7451,
+    "title": "xXx",
+    "overview": "Xander Cage is your standard adrenaline junkie with no fear and a lousy attitude. When the US Government \"recruits\" him to go on a mission, he's not exactly thrilled. His mission: to gather information on an organization that may just be planning the destruction of the world, led by the nihilistic Yorgi.",
+    "releaseDate": "2002-08-09",
+    "popularity": 63.3055,
+    "voteAverage": 5.987,
+    "voteCount": 4885,
+    "genreIds": [
+      28,
+      12,
+      53,
+      80,
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/xeEw3eLeSFmJgXZzmF2Efww0q3s.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/2OHa6ukEq3Hce7Pc2kvu8wkmMFY.jpg",
+    "trailerId": "NgPdDDzVhkA"
+  },
+  {
+    "id": 440249,
+    "title": "After Porn Ends 2",
+    "overview": "After Porn Ends 2 picks up where its predecessor left off and not only turns back the clock to meet the oldest living stars in adult film's history, but goes in depth with some of Its most current retirees and juxtaposes their experiences in a life after porn. Delving deeper into society's ongoing stigmas of race, misogyny, and the reality of decreasing opportunities for these former VHS box cover stars. For some, their careers in adult entertainment is accepted proudly and without regret. In fact, it seems to have proven to be the pathway to their current happiness and inner peace. For others, however, a career in porn has proven to be a conduit to certain despair as they struggle to find a way to bury their past and emerge with a new career or calling.",
+    "releaseDate": "2017-03-28",
+    "popularity": 57.7751,
+    "voteAverage": 5.4,
+    "voteCount": 251,
+    "genreIds": [
+      99
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/rfItXrtDGILwsCdmgVxX79phFuI.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/3Sq9c1Lxh75neQ2BC9thaTO74FZ.jpg",
+    "trailerId": "T9fLBBxjAgM"
+  },
+  {
+    "id": 1173559,
+    "title": "Insidious Inferno",
+    "overview": "A secluded cottage is plagued by gruesome murders and unbeknownst to the inhabitants something other worldly lurks within the halls. Can the couple solve the mystery of the cursed grounds in time or will they open the door to the inferno?",
+    "releaseDate": "2024-11-29",
+    "popularity": 55.2794,
+    "voteAverage": 6.1,
+    "voteCount": 15,
+    "genreIds": [
+      27
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/8kljUAovBatZRYp2ye2RZr239hU.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/8HbNKB2pMiD3mfLgbxe7DgAKjdS.jpg",
+    "trailerId": "F9TGBNG6qRk"
+  },
+  {
+    "id": 1159559,
+    "title": "Scream 7",
+    "overview": "When a new Ghostface killer emerges in the quiet town where Sidney Prescott has built a new life, her darkest fears are realized as her daughter becomes the next target. Determined to protect her family, Sidney must face the horrors of her past to put an end to the bloodshed once and for all.",
+    "releaseDate": "2026-02-25",
+    "popularity": 56.5924,
+    "voteAverage": 6.09,
+    "voteCount": 880,
+    "genreIds": [
+      27,
+      9648,
+      80
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/jjyuk0edLiW8vOSnlfwWCCLpbh5.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/t9J2HXaDuJR7bvIG9XF7mttn4VY.jpg",
+    "trailerId": "4g8OciWNJn4"
+  },
+  {
+    "id": 976912,
+    "title": "Graphic Desires",
+    "overview": "When reclusive Franklin cheats on his partner with a mysterious girl he meets on a dating app, it becomes the start of a deadly obsession.",
+    "releaseDate": "2023-08-31",
+    "popularity": 60.5042,
+    "voteAverage": 6.85,
+    "voteCount": 60,
+    "genreIds": [
+      53,
+      80
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/3BjLdTWRiHc1ISIZMFvToOmghOM.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/rHnANzYUmV3WZw3n0yWOLiR3pen.jpg",
+    "trailerId": "hK21ALZussc"
+  },
+  {
+    "id": 78192,
+    "title": "Michael Jackson: The Life of an Icon",
+    "overview": "See Michael Jackson, one of the most recognizable and popular entertainers of all time, like never before in the feature-length tribute Michael Jackson: The Life of an Icon. Known to millions of fans worldwide for his record-breaking albums, groundbreaking music videos, mesmerizing dance moves and humanitarian efforts, his true story has never really been told...until now. This unprecedented look into the King of Pop's fascinating life includes all-new interviews with his mother Katherine Jackson as well as siblings Tito and Rebbie Jackson,  his nephew  Jaafar Jackson and niece Tahkyah brings plenty Jackson and Friends ends and music legends such as Smokey Robinson, Dionne Warwick and  his 3 children and many more.",
+    "releaseDate": "2011-11-02",
+    "popularity": 57.0779,
+    "voteAverage": 8.075,
+    "voteCount": 159,
+    "genreIds": [
+      99,
+      10402
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/tOCYV9JCXXFtb7YehKXJBMKI4aD.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/wz1eLrNxK77xAY7JYi4iYrtiMEd.jpg",
+    "trailerId": null
+  },
+  {
+    "id": 1383731,
+    "title": "Protector",
+    "overview": "Nikki's life is shattered when her daughter is kidnapped. Thrust into the criminal underworld while hunted by cops and military, she must fight to rescue her child.",
+    "releaseDate": "2026-02-20",
+    "popularity": 49.6824,
+    "voteAverage": 6.373,
+    "voteCount": 51,
+    "genreIds": [
+      28,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/icOZpnGuH9YrEaW3wrw5GJaXGih.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/uQmr1eJvNwa7mCd3rXEXquA6Z3c.jpg",
+    "trailerId": "IRKGIuL3728"
+  },
+  {
+    "id": 278,
+    "title": "The Shawshank Redemption",
+    "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "releaseDate": "1994-09-23",
+    "popularity": 52.0334,
+    "voteAverage": 8.72,
+    "voteCount": 30317,
+    "genreIds": [
+      18,
+      80
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
+    "trailerId": "PLl99DlL6b4"
+  },
+  {
+    "id": 1207162,
+    "title": "Rise of the Conqueror",
+    "overview": "In the 14th-century, as the Silk Road crumbles and rival factions tear the land apart, fearless warrior Timur emerges from exile. Stripped of everything, he fights to unite the fractured kingdoms, using strategy and sheer will to carve an empire from chaos. Undefeated in battle and widely regarded as one of history’s greatest military leaders and tacticians, not to mention one of its most brutal, Timur would found the Timurid Empire, which ruled over modern-day Afghanistan, Iran and Central Asia.",
+    "releaseDate": "2026-04-09",
+    "popularity": 49.8458,
+    "voteAverage": 5.9,
+    "voteCount": 10,
+    "genreIds": [
+      36,
+      28,
+      12,
+      10752
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/9cRE0DsM6CNIiY9Ah3cd8oc3n1Y.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/9gWrxuOJeArUbvnqrZALSjhPv9Y.jpg",
+    "trailerId": "a1xSbllpMDE"
+  },
+  {
+    "id": 848116,
+    "title": "Rocky Aur Rani Kii Prem Kahaani",
+    "overview": "Gym-freak brat Rocky falls in love with Rani, who comes from a well-educated Bengali family. Being from polar opposite worlds, the two decide to switch their families to adjust to each other's cultures and backgrounds and to know if their marriage will survive. Rocky and Rani are trapped in a world where they are united by love but divided by families and the ultimate question is will they fit in?",
+    "releaseDate": "2023-07-28",
+    "popularity": 41.2671,
+    "voteAverage": 6.1,
+    "voteCount": 85,
+    "genreIds": [
+      35,
+      18,
+      10751,
+      10749
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/vTQIqlxUkOuyf2UKhlM2OUaFGKz.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/61RYedFgX1K07xgVIvdJzukSR4g.jpg",
+    "trailerId": "Ah_AMkoaLWA"
+  },
+  {
+    "id": 184314,
+    "title": "Young & Beautiful",
+    "overview": "Isabelle, a 17-year-old student, loses her virginity during a quick holiday romance. When she returns home, she begins a secret life as a prostitute for a year.",
+    "releaseDate": "2013-08-21",
+    "popularity": 53.2856,
+    "voteAverage": 6.506,
+    "voteCount": 1319,
+    "genreIds": [
+      18
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/4RSjzqKIqL5g2OxVIEZQ6ksP1MW.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/6NQqojkmxGe3sxs9bNx6Mi9BuOd.jpg",
+    "trailerId": "mdOlnXTSTw8"
+  },
+  {
+    "id": 24428,
+    "title": "The Avengers",
+    "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+    "releaseDate": "2012-04-25",
+    "popularity": 52.7307,
+    "voteAverage": 8.02,
+    "voteCount": 37757,
+    "genreIds": [
+      878,
+      28,
+      12
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+    "trailerId": "hIR8Ar-Z4hw"
+  },
+  {
+    "id": 458293,
+    "title": "Michael Jackson: Searching for Neverland",
+    "overview": "Based on the best-selling book, Remember the Time: Protecting Michael Jackson in His Final Days, and told through the eyes of Jackson's trusted bodyguards, Bill Whitfield and Javon Beard. The movie will reveal firsthand the devotion Michael Jackson had to his children, and the hidden drama that took place during the last two years of his life.",
+    "releaseDate": "2017-05-29",
+    "popularity": 48.5387,
+    "voteAverage": 6.541,
+    "voteCount": 111,
+    "genreIds": [
+      18,
+      10770
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/mRZIiG4vJiCgJh4v2EPUVVTznC8.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/ecksst0Cb1AO1CZwmGjJu11bfUo.jpg",
+    "trailerId": null
+  },
+  {
+    "id": 1265609,
+    "title": "War Machine",
+    "overview": "On one last grueling mission during Army Ranger training, a combat engineer must lead his unit in a fight against a giant otherworldly killing machine.",
+    "releaseDate": "2026-02-12",
+    "popularity": 48.8462,
+    "voteAverage": 7.285,
+    "voteCount": 1665,
+    "genreIds": [
+      28,
+      878,
+      53
+    ],
+    "posterURL": "https://image.tmdb.org/t/p/original/5txx39hgkMY6iskk3oOX7nU34bE.jpg",
+    "backdropURL": "https://image.tmdb.org/t/p/original/6yeVcxFR0j08vlv2OlL6zbewm4D.jpg",
+    "trailerId": "AFuE1LRxm80"
   }
 ]
