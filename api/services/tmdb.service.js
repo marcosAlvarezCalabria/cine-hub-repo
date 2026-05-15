@@ -3,9 +3,31 @@ const genreMap = require("../data/genres.json");
 
 const TMDB_API_BASE_URL = "https://api.themoviedb.org/3";
 const TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
+const TMDB_RETRY_DELAY_MS = 15 * 60 * 1000;
+
+let tmdbRetryAfter = 0;
+let hasLoggedTmdbCooldown = false;
 
 function hasTmdbCredentials() {
   return Boolean(process.env.TMDB_BEARER_TOKEN || process.env.TMDB_API_KEY);
+}
+
+function canUseTmdb() {
+  if (!hasTmdbCredentials()) {
+    return false;
+  }
+
+  if (Date.now() >= tmdbRetryAfter) {
+    hasLoggedTmdbCooldown = false;
+    return true;
+  }
+
+  if (!hasLoggedTmdbCooldown) {
+    console.warn("TMDB requests temporarily disabled because the configured credentials were rejected.");
+    hasLoggedTmdbCooldown = true;
+  }
+
+  return false;
 }
 
 function listLocalMovies(genreName) {
@@ -46,6 +68,10 @@ async function tmdbFetch(endpoint, params = {}) {
 
   if (!response.ok) {
     const errorBody = await response.text();
+    if (response.status === 401 || response.status === 403) {
+      tmdbRetryAfter = Date.now() + TMDB_RETRY_DELAY_MS;
+      hasLoggedTmdbCooldown = false;
+    }
     throw new Error(`TMDB request failed for ${endpoint}: ${response.status} ${errorBody}`);
   }
 
@@ -98,7 +124,7 @@ async function resolveGenreByName(genreName) {
 }
 
 async function listMoviesByGenre(genreName) {
-  if (!hasTmdbCredentials()) {
+  if (!canUseTmdb()) {
     return listLocalMovies(genreName);
   }
 
@@ -146,7 +172,7 @@ async function getMovieById(movieId) {
     return null;
   }
 
-  if (!hasTmdbCredentials()) {
+  if (!canUseTmdb()) {
     return getLocalMovieById(numericMovieId);
   }
 

@@ -2,6 +2,17 @@
 import { useEffect, useRef, useContext } from 'react'
 import AuthContext from '../../contexts/auth.context'
 
+function MapEmptyState({ title, description }) {
+  return (
+    <div className="profile-map__empty">
+      <div className="profile-map__empty-icon">+</div>
+      <div>
+        <strong>{title}</strong>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
 
 function Map() {
   const { user } = useContext(AuthContext)
@@ -48,8 +59,22 @@ function Map() {
 
   }, [user])
 
-  if (!window.google?.maps || !Array.isArray(user?.location?.coordinates)) {
-    return <p className="text-white-50">Map unavailable for this profile.</p>;
+  if (!Array.isArray(user?.location?.coordinates)) {
+    return (
+      <MapEmptyState
+        title="Add a location to unlock nearby cinemas."
+        description="Update your profile with coordinates and CineHub will surface theaters around you."
+      />
+    );
+  }
+
+  if (!window.google?.maps) {
+    return (
+      <MapEmptyState
+        title="Map is unavailable right now."
+        description="The Google Maps client is not configured in this environment, so nearby cinemas cannot be rendered yet."
+      />
+    );
   }
 
   return (
