@@ -1,6 +1,7 @@
 const express = require("express");
 const rateLimit = require("express-rate-limit");
 const movie = require("../controllers/movies.controller");
+const appConfig = require("../controllers/app-config.controller");
 const user = require("../controllers/users.controllers");
 const comments = require("../controllers/comments.controllers");
 const authMiddleware = require("../middlewares/auth.middleware.js");
@@ -17,6 +18,7 @@ const authLimiter = rateLimit({
 
 router.get("/movies", movie.list);
 router.get("/movies/:id", movie.detail);
+router.get("/config/public", appConfig.publicConfig);
 
 router.post("/user", authLimiter, user.create);
 router.get("/profile", authMiddleware.checkAuth, user.profile);

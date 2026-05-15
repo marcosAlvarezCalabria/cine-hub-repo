@@ -1,5 +1,6 @@
 import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import AuthContext from "../../contexts/auth.context";
+import { getPublicConfig } from "../../services/api.services";
 
 const GOOGLE_MAPS_SCRIPT_ID = "google-maps-script";
 const GOOGLE_MAPS_CALLBACK_NAME = "__cineHubGoogleMapsReady";
@@ -58,11 +59,38 @@ function Map() {
   const mapRef = useRef(null);
   const [mapsReady, setMapsReady] = useState(Boolean(window.google?.maps));
   const [mapsError, setMapsError] = useState(null);
-  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+  const [googleMapsApiKey, setGoogleMapsApiKey] = useState(import.meta.env.VITE_GOOGLE_API_KEY || "");
+  const [configLoaded, setConfigLoaded] = useState(Boolean(import.meta.env.VITE_GOOGLE_API_KEY));
   const coordinates = useMemo(() => user?.location?.coordinates, [user?.location?.coordinates]);
 
   useEffect(() => {
-    if (!googleMapsApiKey) {
+    let isMounted = true;
+
+    getPublicConfig()
+      .then((response) => {
+        if (!isMounted) {
+          return;
+        }
+
+        const runtimeApiKey = response.data?.googleMapsApiKey?.trim();
+        if (runtimeApiKey) {
+          setGoogleMapsApiKey(runtimeApiKey);
+        }
+      })
+      .catch(() => null)
+      .finally(() => {
+        if (isMounted) {
+          setConfigLoaded(true);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!configLoaded || !googleMapsApiKey) {
       return;
     }
 
@@ -84,7 +112,7 @@ function Map() {
     return () => {
       isMounted = false;
     };
-  }, [googleMapsApiKey]);
+  }, [configLoaded, googleMapsApiKey]);
 
   useEffect(() => {
     if (!mapsReady || !Array.isArray(coordinates) || coordinates.length < 2 || !mapRef.current) {
@@ -139,11 +167,20 @@ function Map() {
     );
   }
 
+  if (!configLoaded) {
+    return (
+      <MapEmptyState
+        title="Loading map configuration."
+        description="CineHub is checking whether a Google Maps key is available for this environment."
+      />
+    );
+  }
+
   if (!googleMapsApiKey) {
     return (
       <MapEmptyState
         title="Map is waiting for a Google Maps key."
-        description="Add VITE_GOOGLE_API_KEY to the frontend environment and the cinema map will load automatically."
+        description="Add GOOGLE_MAPS_API_KEY on the server or VITE_GOOGLE_API_KEY locally and the cinema map will load automatically."
       />
     );
   }

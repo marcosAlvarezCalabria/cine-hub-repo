@@ -51,6 +51,10 @@ export function getMovieDetails(id) {
   return http.get(`/movies/${id}`);
 }
 
+export function getPublicConfig() {
+  return http.get("/config/public");
+}
+
 export function createComment(data, movieId) {
   return http.post(`/movie/${movieId}/comments`, data);
 }
