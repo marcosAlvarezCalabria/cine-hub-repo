@@ -10,6 +10,7 @@ import Rating from '@mui/material/Rating';
 function MovieItem({ movie, handlePlayVideo }) {
   const { user, fetchProfile } = useContext(AuthContext);
   const [isFavorite, setIsFavorite] = useState(false);
+  const posterSource = movie?.posterURL || movie?.backdropURL || "";
   const formattedReleaseDate = movie?.releaseDate
     ? new Date(movie.releaseDate).toLocaleDateString("en-US", {
         year: "numeric",
@@ -53,7 +54,7 @@ function MovieItem({ movie, handlePlayVideo }) {
 
         <div className="card movie_card w-100 ">
           <div className="image-container ">
-            <img src={movie?.posterURL} className="card-img-top" alt={movie?.title} />
+            <img src={posterSource} className="card-img-top" alt={movie?.title} />
             <i role="button" onClick={handleFavorites} aria-hidden="true" className="favorite-icon">
               {isFavorite ? <FavoriteIcon style={{ color: "red" }} /> : <FavoriteBorderIcon style={{ color: "red" }} />}
             </i>

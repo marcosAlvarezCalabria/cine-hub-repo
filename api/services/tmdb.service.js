@@ -59,6 +59,13 @@ function normalizeMovie(movie, trailerId = null) {
         .map((genre) => (typeof genre === "string" ? genre : genre.name?.toLowerCase()))
         .filter(Boolean);
 
+  const posterURL = movie.poster_path
+    ? `${TMDB_IMAGE_BASE_URL}${movie.poster_path}`
+    : movie.posterURL || movie.backdropURL || null;
+  const backdropURL = movie.backdrop_path
+    ? `${TMDB_IMAGE_BASE_URL}${movie.backdrop_path}`
+    : movie.backdropURL || movie.posterURL || null;
+
   return {
     id: movie.id,
     title: movie.title,
@@ -68,8 +75,8 @@ function normalizeMovie(movie, trailerId = null) {
     voteAverage: movie.vote_average || movie.voteAverage,
     voteCount: movie.vote_count || movie.voteCount,
     genres: normalizedGenres,
-    posterURL: movie.poster_path ? `${TMDB_IMAGE_BASE_URL}${movie.poster_path}` : movie.posterURL,
-    backdropURL: movie.backdrop_path ? `${TMDB_IMAGE_BASE_URL}${movie.backdrop_path}` : movie.backdropURL,
+    posterURL,
+    backdropURL,
     trailerId: trailerId || movie.trailerId || null,
   };
 }
