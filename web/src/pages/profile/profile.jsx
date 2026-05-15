@@ -1,101 +1,145 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useNavigate, NavLink } from "react-router-dom";
-import { getMovieDetails, getUserProfile } from "../../services/api.services";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import CakeIcon from "@mui/icons-material/Cake";
+import EmailIcon from "@mui/icons-material/Email";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
+import TuneIcon from "@mui/icons-material/Tune";
 import PageLayout from "../../components/layouts/page-layout/page-layout";
 import UserAvatar from "../../components/ui/user-avatar/user-avatar";
 import backgroundProfile from "../../assets/images/cine1.jpg";
-import CakeIcon from '@mui/icons-material/Cake';
-import EmailIcon from '@mui/icons-material/Email';
-import "./profile.css";
+import { getMovieDetails, getUserProfile } from "../../services/api.services";
 import CardMovieFavorite from "../../components/card-movie-favorites/card-movie-favorite";
 import Map from "../../components/map/map";
+import "./profile.css";
 
 function Profile() {
-    const [user, setUser] = useState(null);
-    const [movies, setMovies] = useState([]);
-    const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        async function fetchUserAndMovies() {
-            try {
-                const userProfile = await getUserProfile();
-                setUser(userProfile.data);
+  useEffect(() => {
+    async function fetchUserAndMovies() {
+      try {
+        const userProfile = await getUserProfile();
+        setUser(userProfile.data);
 
-                const favorites = Array.isArray(userProfile.data.favorites) ? userProfile.data.favorites : [];
-                const movieDetailsPromises = favorites.map((movieId) => getMovieDetails(movieId));
-                const moviesResponses = await Promise.all(movieDetailsPromises);
-                const moviesDetails = moviesResponses.map(response => response.data);
-                setMovies(moviesDetails);
-            } catch (error) {
-                if (error.response?.status === 404) {
-                    navigate("/");
-                } else {
-                    console.error(error);
-                }
-            }
+        const favorites = Array.isArray(userProfile.data.favorites) ? userProfile.data.favorites : [];
+        const movieDetailsPromises = favorites.map((movieId) => getMovieDetails(movieId));
+        const moviesResponses = await Promise.all(movieDetailsPromises);
+        setMovies(moviesResponses.map((response) => response.data));
+      } catch (error) {
+        if (error.response?.status === 404) {
+          navigate("/");
+          return;
         }
 
-        fetchUserAndMovies();
-    }, [navigate]);
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
 
-    const formattedDate = user?.birthDate ? new Date(user.birthDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '';
+    fetchUserAndMovies();
+  }, [navigate]);
 
-    return (
-        <PageLayout className="d-flex flex-column align-items-center" background={backgroundProfile}>
-            <div className="stuffed mb-5"></div>
-            <div className="container mt-5 col-lg-9 p-3 container-profile">
-                <div className="text-center">
-                    <h1 className="tittle-profile">Profile</h1>
-                    <div className="line m"></div>
-                </div>
-        
-                <div className="mt-5 d-flex flex-column flex-md-row align-items-start">
-                    <div className="text-center mb-3 mb-md-0">
-                        <UserAvatar width="120px" fontSize="4em" height="120px" />
-                    </div>
-                    <div className="ms-md-3">
-                        <div className="name">{user?.name || "User"}</div>
-                        <div className="line"></div>
-                        <div className="birthDate mt-3">
-                            <h5>
-                                <CakeIcon className="mb-2" /> Birthdate: {formattedDate}
-                            </h5>
-                        </div>
-                        <div className="email">
-                            <h5>
-                                <EmailIcon /> Email: {user?.email || "Unavailable"}
-                            </h5>
-                        </div>
-                    </div>
-                    <div className="ms-md-auto">
-                        <NavLink to={"/profile/edit"}>
-                            <button type="button" className="btn btn-primary">Edit</button>
-                        </NavLink>
-                    </div>
-                </div>
+  const formattedDate = user?.birthDate
+    ? new Date(user.birthDate).toLocaleDateString("es-ES", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      })
+    : "Unavailable";
+
+  const memberSince = user?.createdAt
+    ? new Date(user.createdAt).toLocaleDateString("es-ES", {
+        month: "short",
+        year: "numeric",
+      })
+    : "Recently";
+
+  const stats = [
+    { label: "Favorite picks", value: movies.length, icon: <FavoriteIcon fontSize="small" /> },
+    { label: "Preferred genre", value: user?.genre || "Unset", icon: <LocalMoviesIcon fontSize="small" /> },
+    { label: "Member since", value: memberSince, icon: <TuneIcon fontSize="small" /> },
+  ];
+
+  return (
+    <PageLayout className="profile-page" background={backgroundProfile}>
+      <section className="profile-page__shell container">
+        <div className="profile-page__hero">
+          <div className="profile-page__hero-main">
+            <div className="profile-page__avatar-wrap">
+              <UserAvatar width="132px" fontSize="4rem" height="132px" />
             </div>
-            <div className="container mt-5 col-lg-10">
-                <h3 className="text-center">Your list of favorites</h3>
-                <div className="row">
-                    {movies.length === 0 ? (
-                        <h5 className="text-center">No favorite movies found</h5>
-                    ) : (
-                        movies.map(movie => (
-                            <div className="col-md-4 col-sm-6 mb-4" key={movie.id}>
-                                <a className="text-decoration-none" role="button" href={`/movies/${movie.id}`}>
-                                    <CardMovieFavorite movie={movie} />
-                                </a>
-                            </div>
-                        ))
-                    )}
-                </div>
+            <div className="profile-page__identity">
+              <span className="profile-page__eyebrow">Your CineHub space</span>
+              <h1>{user?.name || "Profile"}</h1>
+              <p>
+                Keep track of your favorite titles, your movie taste and the account details that power your recommendations.
+              </p>
+              <div className="profile-page__meta">
+                <span><CakeIcon fontSize="small" /> {formattedDate}</span>
+                <span><EmailIcon fontSize="small" /> {user?.email || "Unavailable"}</span>
+              </div>
             </div>
-            <div className="container mt-5 col-lg-10">
-                <h2 className="text-center">Cinemas near you:</h2>
-                <Map />
+          </div>
+
+          <div className="profile-page__actions">
+            <Link to="/profile/edit" className="profile-page__button">
+              Edit profile
+            </Link>
+          </div>
+        </div>
+
+        <div className="profile-page__stats">
+          {stats.map((stat) => (
+            <article key={stat.label} className="profile-page__stat-card">
+              <span className="profile-page__stat-icon">{stat.icon}</span>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </article>
+          ))}
+        </div>
+
+        <section className="profile-page__section">
+          <div className="profile-page__section-heading">
+            <span>Favorites</span>
+            <h2>Your saved watchlist.</h2>
+          </div>
+
+          {isLoading ? (
+            <div className="profile-page__empty">
+              <p>Loading your movie picks...</p>
             </div>
-        </PageLayout>
-    );
+          ) : movies.length === 0 ? (
+            <div className="profile-page__empty">
+              <p>No favorite movies yet. Start exploring and save a few titles first.</p>
+            </div>
+          ) : (
+            <div className="profile-page__favorites-grid">
+              {movies.map((movie) => (
+                <Link key={movie.id} className="profile-page__favorite-link" to={`/movies/${movie.id}`}>
+                  <CardMovieFavorite movie={movie} />
+                </Link>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="profile-page__section">
+          <div className="profile-page__section-heading">
+            <span>Nearby</span>
+            <h2>Cinemas around you.</h2>
+          </div>
+          <div className="profile-page__map-card">
+            <Map />
+          </div>
+        </section>
+      </section>
+    </PageLayout>
+  );
 }
 
 export default Profile;

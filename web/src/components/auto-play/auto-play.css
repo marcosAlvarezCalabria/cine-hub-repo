@@ -1,10 +1,88 @@
-.img-card-home{
-    
-    border-radius: 10px;
-    margin: 10px !important;
-}
-.container-slider-home{
-    border-radius: 10px;
+.auto-play {
+  width: 100%;
 }
 
-  
+.auto-play__status {
+  margin: 0;
+  padding: 2rem 1rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.auto-play .slick-slide > div {
+  padding: 0 0.65rem;
+}
+
+.auto-play__card {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1013;
+}
+
+.auto-play__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auto-play__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 9, 12, 0.04) 0%, rgba(8, 9, 12, 0.88) 100%);
+}
+
+.auto-play__content {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.auto-play__meta {
+  margin: 0 0 0.35rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.auto-play__content h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.auto-play__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 93, 61, 0.88);
+  box-shadow: 0 14px 30px rgba(255, 93, 61, 0.35);
+}
+
+@media (max-width: 768px) {
+  .auto-play .slick-slide > div {
+    padding: 0;
+  }
+
+  .auto-play__content {
+    padding: 1rem;
+  }
+
+  .auto-play__content h3 {
+    font-size: 1.05rem;
+  }
+}

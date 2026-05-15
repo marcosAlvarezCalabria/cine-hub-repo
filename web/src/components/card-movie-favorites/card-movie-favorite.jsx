@@ -1,27 +1,26 @@
-function CardMovieFavorite({ movie }){
-    const formattedReleaseDate = movie?.releaseDate
-      ? new Date(movie.releaseDate).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "numeric",
-          day: "numeric",
-        })
-      : "Release date unavailable";
+function CardMovieFavorite({ movie }) {
+  const formattedReleaseDate = movie?.releaseDate
+    ? new Date(movie.releaseDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "Release date unavailable";
 
-    return(
-        <div className="movie-card card mb-3" >
-        <div className="row g-0 ">
-          <div className=" ">
-            <img src={movie.posterURL} className="img-fluid rounded-start" alt="..."/>
-          </div>
-          <div className="col-md-8 ">
-            <div className="card-body ">
-              <h5 className="">{movie.title}</h5>
-              <p className="card-text"><small className="text-muted">Premier {formattedReleaseDate}</small></p>
-            </div>
-          </div>
-        </div>
+  return (
+    <article className="movie-card card">
+      <img src={movie.posterURL || movie.backdropURL} className="img-fluid" alt={movie.title} />
+      <div className="card-body">
+        <p className="card-text text-uppercase text-muted small mb-2">
+          {(movie.genres || []).slice(0, 2).join(" • ") || "Favorite"}
+        </p>
+        <h5 className="mb-2">{movie.title}</h5>
+        <p className="card-text mb-0">
+          <small className="text-muted">Premier {formattedReleaseDate}</small>
+        </p>
       </div>
-
-    )
+    </article>
+  );
 }
-export default CardMovieFavorite
+
+export default CardMovieFavorite;

@@ -15,7 +15,7 @@ const authLimiter = rateLimit({
   message: { message: "Too many authentication attempts. Please try again later." },
 });
 
-router.get("/movies", authMiddleware.checkAuth, movie.list);
+router.get("/movies", movie.list);
 router.get("/movies/:id", movie.detail);
 
 router.post("/user", authLimiter, user.create);

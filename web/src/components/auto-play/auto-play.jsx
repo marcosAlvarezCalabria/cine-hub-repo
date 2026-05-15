@@ -1,66 +1,89 @@
-
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import "./auto-play.css"
+import AddIcon from "@mui/icons-material/Add";
+import { getMovies } from "../../services/api.services";
+import "./auto-play.css";
 
 function AutoPlay() {
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchFeaturedMovies() {
+      try {
+        const { data } = await getMovies();
+        setMovies((data || []).slice(0, 8));
+      } catch (error) {
+        console.error("Unable to load featured movies", error);
+        setMovies([]);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchFeaturedMovies();
+  }, []);
+
   const settings = {
     className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 5,
+    centerMode: movies.length > 1,
+    infinite: movies.length > 3,
+    centerPadding: "70px",
+    slidesToShow: Math.min(4, Math.max(movies.length, 1)),
     speed: 500,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          centerPadding: "50px",
+          slidesToShow: Math.min(3, Math.max(movies.length, 1)),
+          centerPadding: "40px",
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerPadding: "30px",
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "00px",
+          centerPadding: movies.length > 1 ? "28px" : "0px",
         },
       },
     ],
   };
+
+  if (isLoading) {
+    return <p className="auto-play__status">Loading featured movies...</p>;
+  }
+
+  if (movies.length === 0) {
+    return <p className="auto-play__status">Featured movies are unavailable right now.</p>;
+  }
+
   return (
-    <div className="container-slider-home slider-container ">
-      <Slider {...settings}>
-        <div className="card-movie-home ">
-        <span className="hidden-content">Placeholder</span>
-          <img className="img-card-home" src="https://art-gallery-emea.api.hbo.com/images/GXdu2TwR968PCwwEAADWb/tileburnedin?v=8a2c2b6598cdc67f1f61dac4e17a756f&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:not-in-a-hub:territory:adria&language=es-es"/>
-        </div>
-        <div>
-        <span className="hidden-content">Placeholder</span>
-          <img className="img-card-home" src="https://art-gallery-emea.api.hbo.com/images/GZaU1ew6et7qspgEAACJa/tileburnedin?v=1b5ce2bf5f49d1aa447519b19472f1a4&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:not-in-a-hub&language=es-es" />
-        </div>
-        <div>
-        <span className="hidden-content">Placeholder</span>
-          <img className="img-card-home" src="https://art-gallery-emea.api.hbo.com/images/GYBmsKA4FaUnDdQEAAAAj/tileburnedin?v=ec07c6279d82ab85f988595c6b9a80a9&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:bhm2021&language=es-es" alt="" />
-        </div>
-        <div>
-        <span className="hidden-content">Placeholder</span>
-          <img className="img-card-home" src="https://art-gallery-emea.api.hbo.com/images/GYmFp9ATv1JSBmwEAAACW/tileburnedin?v=752aa56fb90517d836ca21a5a811e27d&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:cnn&language=es-es"/>
-        </div>
-        <div>
-        <span className="hidden-content">Placeholder</span>
-          <img className="img-card-home" src="https://art-gallery-emea.api.hbo.com/images/GYGJAwgdTR0zCwwEAAABM/tileburnedin?v=0c19bfcc7ebc28904812164a38ef1f79&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:dc-comics&language=es-es" alt="" />
-        </div>
-        <div>
-        <span className="hidden-content">Placeholder</span>
-          <img className="img-card-home" src="https://art-gallery-emea.api.hbo.com/images/GYA79hQZbUsI3gQEAAAB0/tileburnedin?v=a390c6a448c07b4f03797e8cf53ad289&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:hbo:territory:adria&language=es-es" alt="" />
-        </div>
+    <div className="auto-play">
+      <Slider key={movies.map((movie) => movie.id).join("-")} {...settings}>
+        {movies.map((movie) => (
+          <div key={movie.id} className="auto-play__slide">
+            <article className="auto-play__card">
+              <img
+                className="auto-play__image"
+                src={movie.posterURL || movie.backdropURL}
+                alt={movie.title}
+              />
+              <div className="auto-play__overlay" />
+              <div className="auto-play__content">
+                <div>
+                  <p className="auto-play__meta">
+                    {(movie.genres || []).slice(0, 2).join(" • ") || "Featured pick"}
+                  </p>
+                  <h3>{movie.title}</h3>
+                </div>
+                <Link to={`/movies/${movie.id}`} className="auto-play__link" aria-label={`Open ${movie.title}`}>
+                  <AddIcon />
+                </Link>
+              </div>
+            </article>
+          </div>
+        ))}
       </Slider>
     </div>
   );
