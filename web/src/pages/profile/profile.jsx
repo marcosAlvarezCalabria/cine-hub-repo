@@ -11,18 +11,18 @@ import CardMovieFavorite from "../../components/card-movie-favorites/card-movie-
 import Map from "../../components/map/map";
 
 function Profile() {
-    const { id } = useParams();
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(null);
     const [movies, setMovies] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchUserAndMovies() {
             try {
-                const userProfile = await getUserProfile(id);
+                const userProfile = await getUserProfile();
                 setUser(userProfile.data);
 
-                const movieDetailsPromises = userProfile.data.favorites.map(movieId => getMovieDetails(movieId));
+                const favorites = Array.isArray(userProfile.data.favorites) ? userProfile.data.favorites : [];
+                const movieDetailsPromises = favorites.map((movieId) => getMovieDetails(movieId));
                 const moviesResponses = await Promise.all(movieDetailsPromises);
                 const moviesDetails = moviesResponses.map(response => response.data);
                 setMovies(moviesDetails);
@@ -36,9 +36,9 @@ function Profile() {
         }
 
         fetchUserAndMovies();
-    }, [id, navigate]);
+    }, [navigate]);
 
-    const formattedDate = user.birthDate ? new Date(user.birthDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '';
+    const formattedDate = user?.birthDate ? new Date(user.birthDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '';
 
     return (
         <PageLayout className="d-flex flex-column align-items-center" background={backgroundProfile}>
@@ -54,7 +54,7 @@ function Profile() {
                         <UserAvatar width="120px" fontSize="4em" height="120px" />
                     </div>
                     <div className="ms-md-3">
-                        <div className="name">{user.name}</div>
+                        <div className="name">{user?.name || "User"}</div>
                         <div className="line"></div>
                         <div className="birthDate mt-3">
                             <h5>
@@ -63,7 +63,7 @@ function Profile() {
                         </div>
                         <div className="email">
                             <h5>
-                                <EmailIcon /> Email: {user.email}
+                                <EmailIcon /> Email: {user?.email || "Unavailable"}
                             </h5>
                         </div>
                     </div>
