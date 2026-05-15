@@ -53,8 +53,9 @@ async function tmdbFetch(endpoint, params = {}) {
 }
 
 function normalizeMovie(movie, trailerId = null) {
-  const normalizedGenres = movie.genre_ids
-    ? movie.genre_ids.map((genreId) => genreMap[String(genreId)]).filter(Boolean)
+  const movieGenreIds = movie.genre_ids || movie.genreIds;
+  const normalizedGenres = movieGenreIds
+    ? movieGenreIds.map((genreId) => genreMap[String(genreId)]).filter(Boolean)
     : (movie.genres || [])
         .map((genre) => (typeof genre === "string" ? genre : genre.name?.toLowerCase()))
         .filter(Boolean);
